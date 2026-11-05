@@ -1,0 +1,4 @@
+﻿2026/11/05 22:24:52 INFO  : Starting transaction limiter: max 40 transactions/s with burst 40
+2026/11/05 22:24:52 INFO  : Using --user koofr --pass XXXX as authenticated user
+2026/11/05 22:24:52 NOTICE: Serving remote control on http://127.0.0.1:5574/
+2026/11/05 22:24:52 CRITICAL: Failed to create file system for "nosuchremote:": didn't find section in config file ("nosuchremote")

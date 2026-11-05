@@ -1,0 +1,20 @@
+# Example rclone remote for Koofr.
+# Don't copy this by hand - run `rclone config` and answer the prompts (README.md, step 3).
+# This is only here so you can recognise what the result should look like.
+#
+# Where it lives:  %APPDATA%\rclone\rclone.conf   (rclone config file  -> prints the exact path)
+#
+# The password must be a Koofr APP password (Koofr website -> Preferences -> Password ->
+# App passwords), not your main Koofr password. rclone stores it obscured, NOT encrypted:
+# anyone who can read rclone.conf can recover it. Keep the file private, and revoke the app
+# password in Koofr if the PC is lost.
+
+[koofr]
+type = koofr
+provider = koofr
+user = you@example.com
+password = <filled in by rclone config - obscured app password>
+
+# Optional, untested here: disable HTTP/2 for this remote only, instead of passing
+# --disable-http2 on every command (documented as an "override" in rclone's docs).
+# override.disable_http2 = true

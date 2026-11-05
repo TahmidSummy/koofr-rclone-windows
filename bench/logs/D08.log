@@ -1,0 +1,91 @@
+﻿2026/11/05 19:34:35 INFO  : 
+Transferred:   	   38.984 MiB / 500 MiB, 8%, 5.746 MiB/s, ETA 1m20s
+Checks:                 0 / 0, -, Listed 20
+Transferred:            0 / 20, 0%
+Elapsed time:         4.9s
+Transferring:
+ *                                       m01.bin: 31% / 25 MiB, 2.332 MiB/s, 7s
+ *                                       m02.bin: 55% / 25 MiB, 3.999 MiB/s, 2s
+ *                                       m03.bin: 39% / 25 MiB, 2.332 MiB/s, 6s
+ *                                       m04.bin: 27% / 25 MiB, 1.332 MiB/s, 13s
+
+2026/11/05 19:34:38 INFO  : m02.bin: Copied (new)
+2026/11/05 19:34:38 INFO  : m01.bin: Copied (new)
+2026/11/05 19:34:39 INFO  : m03.bin: Copied (new)
+2026/11/05 19:34:39 INFO  : m04.bin: Copied (new)
+2026/11/05 19:34:40 INFO  : 
+Transferred:   	  108.051 MiB / 475 MiB, 23%, 11.277 MiB/s, ETA 32s
+Checks:                 0 / 0, -, Listed 20
+Transferred:            4 / 20, 20%
+Elapsed time:         9.9s
+Transferring:
+ *                                       m05.bin:  0% / 25 MiB, 0 B/s, -
+ *                                       m06.bin: 15% / 25 MiB, 3.996 MiB/s, 5s
+ *                                       m07.bin: 15% / 25 MiB, 3.996 MiB/s, 5s
+ *                                       m08.bin: transferring
+
+2026/11/05 19:34:43 INFO  : m06.bin: Copied (new)
+2026/11/05 19:34:44 INFO  : m07.bin: Copied (new)
+2026/11/05 19:34:44 INFO  : m08.bin: Copied (new)
+2026/11/05 19:34:45 INFO  : m05.bin: Copied (new)
+2026/11/05 19:34:45 INFO  : 
+Transferred:   	  204.023 MiB / 450 MiB, 45%, 13.428 MiB/s, ETA 18s
+Checks:                 0 / 0, -, Listed 20
+Transferred:            8 / 20, 40%
+Elapsed time:        14.9s
+Transferring:
+ *                                       m09.bin: 15% / 25 MiB, 3.996 MiB/s, 5s
+ *                                       m10.bin: transferring
+ *                                       m11.bin:  0% / 25 MiB, 0 B/s, -
+ *                                       m12.bin: transferring
+
+2026/11/05 19:34:48 INFO  : m09.bin: Copied (new)
+2026/11/05 19:34:50 INFO  : 
+Transferred:   	  293.984 MiB / 500 MiB, 59%, 14.491 MiB/s, ETA 14s
+Checks:                 0 / 0, -, Listed 20
+Transferred:            9 / 20, 45%
+Elapsed time:        19.9s
+Transferring:
+ *                                       m10.bin: 95% / 25 MiB, 4.999 MiB/s, 0s
+ *                                       m11.bin: 87% / 25 MiB, 4.399 MiB/s, 0s
+ *                                       m12.bin: 79% / 25 MiB, 4.999 MiB/s, 1s
+ *                                       m13.bin: 11% / 25 MiB, 0 B/s, -
+
+2026/11/05 19:34:50 INFO  : m10.bin: Copied (new)
+2026/11/05 19:34:51 INFO  : m11.bin: Copied (new)
+2026/11/05 19:34:51 INFO  : m12.bin: Copied (new)
+2026/11/05 19:34:54 INFO  : m13.bin: Copied (new)
+2026/11/05 19:34:55 INFO  : 
+Transferred:   	  351.988 MiB / 475 MiB, 74%, 14.118 MiB/s, ETA 8s
+Checks:                 0 / 0, -, Listed 20
+Transferred:           13 / 20, 65%
+Elapsed time:        24.9s
+Transferring:
+ *                                       m14.bin: 55% / 25 MiB, 3.665 MiB/s, 3s
+ *                                       m15.bin: 35% / 25 MiB, 2.332 MiB/s, 6s
+ *                                       m16.bin: 15% / 25 MiB, 1.998 MiB/s, 10s
+ *                                       m17.bin: transferring
+
+2026/11/05 19:34:57 INFO  : m14.bin: Copied (new)
+2026/11/05 19:34:57 INFO  : m16.bin: Copied (new)
+2026/11/05 19:34:57 INFO  : m15.bin: Copied (new)
+2026/11/05 19:35:00 INFO  : m17.bin: Copied (new)
+2026/11/05 19:35:00 INFO  : 
+Transferred:   	  436.988 MiB / 500 MiB, 87%, 14.938 MiB/s, ETA 4s
+Checks:                 0 / 0, -, Listed 20
+Transferred:           17 / 20, 85%
+Elapsed time:        29.9s
+Transferring:
+ *                                       m18.bin: 15% / 25 MiB, 3.996 MiB/s, 5s
+ *                                       m19.bin: 15% / 25 MiB, 1.996 MiB/s, 10s
+ *                                       m20.bin: 15% / 25 MiB, 2.996 MiB/s, 7s
+
+2026/11/05 19:35:03 INFO  : m20.bin: Copied (new)
+2026/11/05 19:35:04 INFO  : m19.bin: Copied (new)
+2026/11/05 19:35:05 INFO  : m18.bin: Copied (new)
+2026/11/05 19:35:05 INFO  : 
+Transferred:   	      500 MiB / 500 MiB, 100%, 14.621 MiB/s, ETA 0s
+Checks:                 0 / 0, -, Listed 20
+Transferred:           20 / 20, 100%
+Elapsed time:        34.9s
+

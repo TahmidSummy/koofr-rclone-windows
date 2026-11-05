@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koofr rclone tuning</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1f1f1c;--muted:#6b6a64;--line:#e3e0d8;--card:#ffffff;--accent:#2f6f5e;--bad:#b3412e;--warn:#a26a12;--good:#2f6f5e;--bar:#9cc7b9;--barbad:#e2a497;--code:#f2efe8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171716;--fg:#e9e7e1;--muted:#a19f97;--line:#33322f;--card:#1f1f1d;--accent:#7cc4ad;--bad:#f08a76;--warn:#e0b25a;--good:#7cc4ad;--bar:#3f7a68;--barbad:#8a4235;--code:#262624}}
+:root[data-theme="dark"]{--bg:#171716;--fg:#e9e7e1;--muted:#a19f97;--line:#33322f;--card:#1f1f1d;--accent:#7cc4ad;--bad:#f08a76;--warn:#e0b25a;--good:#7cc4ad;--bar:#3f7a68;--barbad:#8a4235;--code:#262624}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px}
+h1{font-size:28px;margin:0 0 4px}
+h2{font-size:20px;margin:40px 0 10px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:16px;margin:24px 0 6px}
+p,li{max-width:76ch}
+.sub{color:var(--muted);margin:0 0 20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.stat b{display:block;font-size:22px}
+.stat span{color:var(--muted);font-size:13px}
+code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13px}
+code{background:var(--code);padding:1px 5px;border-radius:4px}
+pre{background:var(--code);padding:12px 14px;border-radius:8px;overflow-x:auto;line-height:1.45}
+table{border-collapse:collapse;width:100%;margin:8px 0 4px;font-size:14px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.03em}
+td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.wrap{overflow-x:auto}
+.bar{height:10px;background:var(--bar);border-radius:3px;min-width:2px}
+.bar.bad{background:var(--barbad)}
+td.b{width:30%}
+.tag{display:inline-block;font-size:12px;padding:1px 7px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.good{color:var(--good)} .bad{color:var(--bad)} .warn{color:var(--warn)}
+.note{color:var(--muted);font-size:13px}
+.chg td:first-child{white-space:nowrap}
+</style>
+</head>
+<body>
+<main>
+<h1>rclone + Koofr: tuning results</h1>
+<p class="sub">Tests run 5 Nov 2026 on your PC, using E: as the test area and a throwaway <code>_rclone-lab</code> folder on Koofr. Your live Z: mount was never touched. 70 timed runs in total.</p>
+
+<div class="grid">
+  <div class="card stat"><b class="good">~3Ã—</b><span>faster big-file reads through the mount (parallel chunks)</span></div>
+  <div class="card stat"><b class="good">~4Ã—</b><span>faster uploads of many small files (16 at once instead of 4)</span></div>
+  <div class="card stat"><b class="good">~1.6Ã—</b><span>faster uploads through the mount (16 at once instead of 4)</span></div>
+  <div class="card stat"><b class="bad">429</b><span>Koofr rate-limits at roughly 50+ requests/s, so a cap is needed</span></div>
+</div>
+
+<h2>1. Recommended mount settings</h2>
+<p>Step one is to <b>update rclone to 1.75.2</b>. One of the speed-ups below (parallel chunk reads) hung once on your current 1.74.2, and 1.75.0/1.75.1 fixed reader deadlocks of that kind. On 1.75.2 it ran 6 times with no problems.</p>
+<pre>winget upgrade Rclone.Rclone</pre>
+
+<div class="wrap"><table class="chg">
+<tr><th>Flag</th><th>Now</th><th>Recommended</th><th>Why</th></tr>
+<tr><td><code>--transfers</code></td><td>4 (default)</td><td><b>16</b></td><td>How many files the mount uploads at once. Writing 20 Ã— 25 MiB went from 11.5 to 18.5 MiB/s (W01 â†’ W03). Small-file uploads went from 4.4 to 21.8 files/s.</td></tr>
+<tr><td><code>--vfs-read-chunk-streams</code><br><code>--vfs-read-chunk-size</code></td><td>off<br>128M</td><td><b>16</b><br><b>8M</b></td><td>Downloads each file in 16 parallel pieces instead of one stream. A 1 GiB cold read was 2.5â€“3Ã— faster in every back-to-back round (6â€“11 MiB/s â†’ 20â€“27 MiB/s). Needs 1.75.2 (see above).</td></tr>
+<tr><td><code>--tpslimit</code><br><code>--tpslimit-burst</code></td><td>none</td><td><b>40</b><br><b>40</b></td><td>Caps requests to Koofr at 40/s. Without it, Koofr returned <code>429 Too Many Requests</code>, rclone didn't retry, and files failed. At 40/s, 600 requests in 14 s got through with 0 errors. Big files barely notice (3â€“4 requests/s).</td></tr>
+<tr><td><code>--vfs-cache-min-free-space</code></td><td>none</td><td><b>10G</b></td><td>Your cache limit is 100G but E: only has 93 GB free. This stops the cache from ever filling E: completely.</td></tr>
+<tr><td><code>--vfs-cache-poll-interval</code></td><td>15s</td><td><b>1m</b> (default)</td><td>This only controls how often rclone tidies the cache. At 15s it writes 5,760 useless log lines a day: 99.9% of your 27.6 MB log is this one message.</td></tr>
+<tr><td><code>--timeout</code></td><td>5m (default)</td><td><b>1m</b></td><td>One upload froze for exactly 5 minutes (U02) before rclone gave up on a dead connection and retried. With 1m, a stall like that costs 1 minute. <span class="tag">reasoned, not reproduced</span></td></tr>
+<tr><td><code>--log-file-max-size</code><br><code>--log-file-max-backups</code></td><td>none</td><td><b>5M</b><br><b>3</b></td><td>Log rotation, so the log can't grow forever. Keeps at most about 20 MB.</td></tr>
+<tr><td><code>--disable-http2</code></td><td>on</td><td><b>keep</b></td><td>Confirmed. With HTTP/2 left on, one big upload was 3.2Ã— slower (U11 vs U12), 4-stream downloads were 2â€“6Ã— slower, and mount reads were 1.4Ã— slower.</td></tr>
+<tr><td><code>--vfs-cache-mode full</code></td><td>full</td><td><b>keep</b></td><td>Re-reads come from E: at about 2.5 GB/s (M01w). Mode <code>writes</code> was slower on cold reads too (16 vs 24 MiB/s).</td></tr>
+<tr><td><code>--dir-cache-time</code></td><td>1h</td><td>keep (or 10m)</td><td>Koofr can't tell rclone about changes (no change notifications), so files added from your phone or the web can take up to an hour to show on Z:. Listing a 300-file folder only takes 0.1â€“0.5 s, so 10m is cheap if that bothers you.</td></tr>
+<tr><td>everything else</td><td></td><td>keep</td><td><code>--network-mode --links --vfs-cache-max-age 999h --vfs-cache-max-size 100G --vfs-read-ahead 256M --vfs-fast-fingerprint --vfs-write-back 10s</code> are all fine.</td></tr>
+</table></div>
+
+<h3>The full command</h3>
+<pre>rclone mount koofr: Z: ^
+  --vfs-cache-mode full --network-mode --links --no-console ^
+  --disable-http2 --transfers 16 --tpslimit 40 --tpslimit-burst 40 --timeout 1m ^
+  --vfs-read-chunk-streams 16 --vfs-read-chunk-size 8M --vfs-read-ahead 256M ^
+  --dir-cache-time 1h --vfs-fast-fingerprint --vfs-write-back 10s ^
+  --vfs-cache-max-age 999h --vfs-cache-max-size 100G --vfs-cache-min-free-space 10G ^
+  --vfs-cache-poll-interval 1m --cache-dir E:\main-rclone-cache ^
+  --log-level INFO --log-file %USERPROFILE%\rclone-Koofr.log --log-file-max-size 5M --log-file-max-backups 3</pre>
+<p class="note"><b>Smoke test:</b> a mount with exactly these flags on rclone 1.75.2 read a cold 1 GiB file at <b>30.8 MiB/s</b>, with no errors in the log. In the same session your current flags managed 6â€“11 MiB/s.</p>
+<p class="note">A ready-made version of your script with these flags is in <code>E:\rclone-lab\Mount-Koofr.recommended.ps1</code>. Your real <code>C:\Scripts\Mount-Koofr.ps1</code> hasn't been changed.</p>
+
+<h3>For <code>rclone copy</code> / <code>sync</code> (outside the mount)</h3>
+<pre>--disable-http2 --transfers 16 --multi-thread-streams 16 --tpslimit 40 --tpslimit-burst 40 --timeout 1m</pre>
+<p class="note">16 streams downloaded one 1 GiB file at 26â€“36 MiB/s, against 16â€“30 MiB/s with the default 4.</p>
+
+<h2>2. Your setup</h2>
+<div class="wrap"><table>
+<tr><td>Internet</td><td>~770 Mbit/s down (1 GB from OVH), ~110 Mbit/s up</td></tr>
+<tr><td>Latency to Koofr</td><td>29 ms (Koofr is in Slovenia)</td></tr>
+<tr><td>Koofr</td><td>1 TiB plan, 743 GiB used. Backend features: no multipart upload, no change notifications, no recursive listing (so <code>--fast-list</code> does nothing), case-insensitive</td></tr>
+<tr><td>Cache disk (E:)</td><td>Kingston A400 480 GB SATA SSD, NTFS, 93 GB free</td></tr>
+<tr><td>rclone</td><td>1.74.2 installed (winget). 1.75.2 was tested from a separate copy on E:</td></tr>
+</table></div>
+
+<h2>3. What the research said</h2>
+<ul>
+<li><b>HTTP/2 + Koofr is a known problem.</b> Forum users report Koofr dropping to single-connection speeds unless <code>--disable-http2</code> is used, which is blamed on a Go library bug. The claim was that it only hurts parallel transfers. <b>My tests found it also hurts one big upload, by 3Ã—.</b></li>
+<li><b>Koofr has no multipart/chunked upload</b> in rclone, so one big file uploads as one stream. Your ~10 MiB/s single-file upload is close to that limit. Many files in parallel go faster.</li>
+<li><b>Mount reads used to be single-stream.</b> A 2023 thread found mount downloads 20Ã— slower than <code>rclone copy</code>, and nothing fixed it then. rclone 1.68 (2024) added <code>--vfs-read-chunk-streams</code> for exactly this. Nobody in the Koofr threads had tried it, and it's the biggest win here.</li>
+<li>HTTP/2 can't be turned off in the config file the normal way. The docs do list <code>override.disable_http2</code> as a per-remote override, but I didn't test it, so the flag on the command line is the reliable option.</li>
+</ul>
+
+<h2>4. Test results</h2>
+<p class="note">Speeds from one run to the next swung by up to about 2Ã—, because Koofr and internet speed varied through the evening. So the important comparisons were repeated, and the mount reads were run interleaved (A, B, A, B) so both sides got the same conditions. Bars are scaled within each table.</p>
+
+<h3>4a. Uploads with <code>rclone copy</code></h3>
+<div class="wrap"><table>
+<tr><th>Test</th><th>Setting</th><th class="n">Time</th><th class="n">Speed</th><th class="b"></th></tr>
+<tr><td>U02 / U02b</td><td>300 small files, HTTP/2 off, 4 at once <span class="tag">your current</span></td><td class="n">348 s / 68 s</td><td class="n">0.9 / 4.4 files/s</td><td class="b"><div class="bar" style="width:12%"></div></td></tr>
+<tr><td>U01</td><td>300 small files, HTTP/2 on, 4 at once</td><td class="n">48 s</td><td class="n">6.3 files/s</td><td class="b"><div class="bar" style="width:17%"></div></td></tr>
+<tr><td>U03</td><td>300 small files, HTTP/2 off, 8 at once</td><td class="n">24 s</td><td class="n">12.4 files/s</td><td class="b"><div class="bar" style="width:33%"></div></td></tr>
+<tr><td>U04</td><td>300 small files, HTTP/2 off, 16 at once</td><td class="n">14 s</td><td class="n">21.8 files/s</td><td class="b"><div class="bar" style="width:58%"></div></td></tr>
+<tr><td>U06</td><td>300 small files, HTTP/2 on, 16 at once</td><td class="n">12 s</td><td class="n">25.5 files/s</td><td class="b"><div class="bar" style="width:68%"></div></td></tr>
+<tr><td>U05</td><td>300 small files, HTTP/2 off, 32 at once</td><td class="n">8 s</td><td class="n">37.3 files/s</td><td class="b"><div class="bar" style="width:100%"></div></td></tr>
+<tr><td>U07</td><td>20 Ã— 25 MiB, HTTP/2 on, 4 at once</td><td class="n">63 s</td><td class="n">8.0 MiB/s</td><td class="b"><div class="bar" style="width:51%"></div></td></tr>
+<tr><td>U08</td><td>20 Ã— 25 MiB, HTTP/2 off, 4 at once</td><td class="n">50 s</td><td class="n">10.0 MiB/s</td><td class="b"><div class="bar" style="width:64%"></div></td></tr>
+<tr><td>U09</td><td>20 Ã— 25 MiB, HTTP/2 off, 8 at once</td><td class="n">34 s</td><td class="n">14.6 MiB/s</td><td class="b"><div class="bar" style="width:93%"></div></td></tr>
+<tr><td>U10</td><td>20 Ã— 25 MiB, HTTP/2 off, 16 at once</td><td class="n">32 s</td><td class="n">15.6 MiB/s</td><td class="b"><div class="bar" style="width:100%"></div></td></tr>
+<tr><td>U11</td><td>1 GiB file, HTTP/2 on</td><td class="n">318 s</td><td class="n">3.2 MiB/s</td><td class="b"><div class="bar bad" style="width:31%"></div></td></tr>
+<tr><td>U12</td><td>1 GiB file, HTTP/2 off</td><td class="n">98 s</td><td class="n">10.4 MiB/s</td><td class="b"><div class="bar" style="width:100%"></div></td></tr>
+</table></div>
+<p><b>Takeaway:</b> parallel uploads are the big lever. Mid-size files level off around 8â€“16 at once, which is about your upload bandwidth. U02 froze for exactly 5 minutes with nothing moving, then finished in about 40 s. That's rclone's default 5-minute timeout catching a dead connection, and it's why I recommend <code>--timeout 1m</code>.</p>
+
+<h3>4b. Downloads with <code>rclone copy</code></h3>
+<div class="wrap"><table>
+<tr><th>Test</th><th>Setting</th><th class="n">Round 1</th><th class="n">Round 2</th><th class="b"></th></tr>
+<tr><td>D02</td><td>1 GiB, HTTP/2 off, single stream</td><td class="n">5.1 MiB/s</td><td class="n">â€“</td><td class="b"><div class="bar" style="width:13%"></div></td></tr>
+<tr><td>D01</td><td>1 GiB, HTTP/2 on, 4 streams <span class="tag">rclone defaults</span></td><td class="n">2.7 MiB/s</td><td class="n">16.4 MiB/s</td><td class="b"><div class="bar bad" style="width:25%"></div></td></tr>
+<tr><td>D03</td><td>1 GiB, HTTP/2 off, 4 streams</td><td class="n">15.8 MiB/s</td><td class="n">30.5 MiB/s</td><td class="b"><div class="bar" style="width:60%"></div></td></tr>
+<tr><td>D04</td><td>1 GiB, HTTP/2 off, 8 streams</td><td class="n">20.2 MiB/s</td><td class="n">â€“</td><td class="b"><div class="bar" style="width:52%"></div></td></tr>
+<tr><td>D06</td><td>1 GiB, HTTP/2 off, 8 streams, 16M chunks</td><td class="n">25.4 MiB/s</td><td class="n">â€“</td><td class="b"><div class="bar" style="width:66%"></div></td></tr>
+<tr><td>D05</td><td>1 GiB, HTTP/2 off, 16 streams</td><td class="n">25.8 MiB/s</td><td class="n">36.1 MiB/s</td><td class="b"><div class="bar" style="width:80%"></div></td></tr>
+<tr><td>D07</td><td>1 GiB, HTTP/2 on, 16 streams</td><td class="n">28.8 MiB/s</td><td class="n">38.6 MiB/s</td><td class="b"><div class="bar" style="width:87%"></div></td></tr>
+<tr><td>D08</td><td>20 Ã— 25 MiB, HTTP/2 off, 4 at once</td><td class="n">14.1 MiB/s</td><td class="n">â€“</td><td class="b"><div class="bar" style="width:37%"></div></td></tr>
+<tr><td>D09</td><td>20 Ã— 25 MiB, HTTP/2 off, 8 at once</td><td class="n">21.2 MiB/s</td><td class="n">â€“</td><td class="b"><div class="bar" style="width:55%"></div></td></tr>
+<tr><td>D10</td><td>20 Ã— 25 MiB, HTTP/2 off, 16 at once</td><td class="n">22.8 MiB/s</td><td class="n">â€“</td><td class="b"><div class="bar" style="width:59%"></div></td></tr>
+<tr><td>D11</td><td>20 Ã— 25 MiB, HTTP/2 on, 8 at once</td><td class="n">24.0 MiB/s</td><td class="n">â€“</td><td class="b"><div class="bar" style="width:62%"></div></td></tr>
+</table></div>
+<p><b>Takeaway:</b> more streams help, and 16 was best. With 16 streams HTTP/2 makes no real difference, but with 4 it's a disaster (2.7 MiB/s), so keeping it off is the safe choice.</p>
+
+<h3>4c. Many small files, and Koofr's rate limit</h3>
+<div class="wrap"><table>
+<tr><th>Test</th><th>Setting (download 300 Ã— 64 KiB)</th><th class="n">Speed</th><th>Result</th></tr>
+<tr><td>D12</td><td>HTTP/2 off, 4 at once</td><td class="n">12.8 files/s</td><td class="good">ok</td></tr>
+<tr><td>D13 / D13b</td><td>HTTP/2 off, 16 at once</td><td class="n">53.9 / 52.7 files/s</td><td class="good">ok</td></tr>
+<tr><td>D14</td><td>HTTP/2 off, 32 at once (right after D13)</td><td class="n">77 files/s</td><td class="bad">46 files failed with 429</td></tr>
+<tr><td>D15</td><td>HTTP/2 on, 16 at once (right after D14)</td><td class="n">â€“</td><td class="bad">all 300 failed with 429</td></tr>
+<tr><td>D15b</td><td>HTTP/2 on, 16 at once, after a 90 s pause</td><td class="n">74.2 files/s</td><td class="good">ok</td></tr>
+<tr><td>D14b / D16</td><td>32 or 16 at once, <code>--tpslimit 20</code></td><td class="n">20.5 files/s</td><td class="good">ok, but capped low</td></tr>
+<tr><td>D17a + D17b</td><td>32 at once, <code>--tpslimit 40</code>, two runs back to back (600 requests)</td><td class="n">42.1 / 42.8 files/s</td><td class="good">ok, 0 errors</td></tr>
+</table></div>
+<p><b>Takeaway:</b> Koofr returns <code>429 Too Many Requests</code> after about 550 requests in about 10 seconds. It gives no "retry after" hint, and rclone counted each one as a failed file. A cap of 40 requests/s avoids it and still allows about 42 files/s. Through the mount, this could happen if Explorer builds thumbnails for a big photo folder, or a program scans lots of files at once.</p>
+
+<h3>4d. Reading a 1 GiB file through a mount (cold cache)</h3>
+<p class="note">A fresh test mount on W: with an empty cache each time, then the file is read from start to finish, as a video player or a copy off the drive would.</p>
+<div class="wrap"><table>
+<tr><th>Test</th><th>Setting</th><th class="n">Speed</th><th class="b"></th></tr>
+<tr><td>M01</td><td>your current flags</td><td class="n">24.4 MiB/s</td><td class="b"><div class="bar" style="width:74%"></div></td></tr>
+<tr><td>M01w</td><td>same file read again (from the E: cache)</td><td class="n">2,570 MiB/s</td><td class="b"><span class="tag">off the chart</span></td></tr>
+<tr><td>M02</td><td>current + HTTP/2 on</td><td class="n">17.7 MiB/s</td><td class="b"><div class="bar bad" style="width:54%"></div></td></tr>
+<tr><td>M07</td><td>cache mode <code>writes</code> instead of <code>full</code></td><td class="n">16.3 MiB/s</td><td class="b"><div class="bar bad" style="width:49%"></div></td></tr>
+<tr><td>M03</td><td>current + 4 chunks Ã— 16M</td><td class="n">18.2 MiB/s</td><td class="b"><div class="bar" style="width:55%"></div></td></tr>
+<tr><td>M04</td><td>current + 8 chunks Ã— 16M</td><td class="n">22.8 MiB/s</td><td class="b"><div class="bar" style="width:69%"></div></td></tr>
+<tr><td>M05</td><td>current + 16 chunks Ã— 8M</td><td class="n">32.9 MiB/s</td><td class="b"><div class="bar" style="width:100%"></div></td></tr>
+<tr><td>M06</td><td>current + 8 chunks Ã— 32M</td><td class="n bad">hung</td><td class="b bad">froze for 39 min (1.74.2)</td></tr>
+</table></div>
+<p>That first pass was noisy, so I re-ran the three main options <b>interleaved</b> (A, B, C, A, B, C) on both rclone versions:</p>
+<div class="wrap"><table>
+<tr><th>Setting</th><th class="n">1.74.2 r1</th><th class="n">1.74.2 r2</th><th class="n">1.75.2 r1</th><th class="n">1.75.2 r2</th></tr>
+<tr><td>your current flags</td><td class="n">6.4</td><td class="n">7.9</td><td class="n">9.6</td><td class="n">11.2</td></tr>
+<tr><td>+ 16 chunks Ã— 8M <span class="tag">recommended</span></td><td class="n good">20.4</td><td class="n good">23.7</td><td class="n good">26.8</td><td class="n good">27.5</td></tr>
+<tr><td>+ 8 chunks Ã— 32M</td><td class="n good">22.6</td><td class="n good">24.8</td><td class="n good">29.7</td><td class="n good">27.7</td></tr>
+</table></div>
+<p class="note">MiB/s. All 12 runs finished, with no hangs.</p>
+<p><b>Takeaway:</b> parallel chunk reads are 2.5â€“3Ã— faster every time. 8 Ã— 32M is about as fast as 16 Ã— 8M, but it's the setting that hung once on 1.74.2. So the recommendation is 16 Ã— 8M on 1.75.2, which never failed in 7 runs.</p>
+
+<h3>4e. Browsing folders and small files through the mount</h3>
+<div class="wrap"><table>
+<tr><th>Test</th><th>Setting</th><th class="n">List folder</th><th class="n">Open + read 300 files</th></tr>
+<tr><td>S01</td><td>your current flags</td><td class="n">0.12 s</td><td class="n">103 s (2.9 files/s)</td></tr>
+<tr><td>S02</td><td>current + 16 chunks Ã— 8M</td><td class="n">0.10 s</td><td class="n">71 s (4.2 files/s)</td></tr>
+<tr><td>S03</td><td>current without <code>--vfs-fast-fingerprint</code></td><td class="n">0.10 s</td><td class="n">79 s (3.8 files/s)</td></tr>
+<tr><td>S0xw</td><td>listing the same folder again</td><td class="n">0.01 s</td><td class="n">â€“</td></tr>
+</table></div>
+<p><b>Takeaway:</b> folder listings are fast. Opening small files one after another costs about 0.3 s each, and that is Koofr's own per-file delay: <code>rclone copy</code> showed the same 0.3 s per file per stream (D12). No mount flag removes it. Programs that open several files at once (or copying a folder with Explorer, which rclone uploads/downloads in parallel) are much faster than one-at-a-time access.</p>
+
+<h3>4f. Writing through the mount (copy 20 Ã— 25 MiB onto the drive, time until it's all on Koofr)</h3>
+<div class="wrap"><table>
+<tr><th>Test</th><th>Setting</th><th class="n">Until on Koofr</th><th class="n">Speed</th><th class="b"></th></tr>
+<tr><td>W01</td><td>your current flags (4 uploads at once)</td><td class="n">43.6 s</td><td class="n">11.5 MiB/s</td><td class="b"><div class="bar" style="width:42%"></div></td></tr>
+<tr><td>W02</td><td>+ <code>--transfers 8</code></td><td class="n">34.2 s</td><td class="n">14.6 MiB/s</td><td class="b"><div class="bar" style="width:53%"></div></td></tr>
+<tr><td>W03</td><td>+ <code>--transfers 16</code></td><td class="n">27.1 s</td><td class="n">18.5 MiB/s</td><td class="b"><div class="bar" style="width:67%"></div></td></tr>
+<tr><td>W04</td><td>+ <code>--transfers 8</code>, write-back 2 s instead of 10 s</td><td class="n">18.2 s</td><td class="n">27.5 MiB/s</td><td class="b"><div class="bar" style="width:100%"></div></td></tr>
+</table></div>
+<p><b>Takeaway:</b> the copy onto the drive itself finished in under 1 s every time, because files land in the E: cache first and upload in the background. More parallel uploads finish sooner. W04 looks fastest, but part of that is just starting 8 s earlier (write-back 2 s vs 10 s) rather than uploading faster. A shorter write-back also means more re-uploads when a program saves a file several times, so 10 s is a sensible default to keep.</p>
+
+<h2>5. Koofr quirks found</h2>
+<ul>
+<li><b>Rate limit (429)</b> at about 50+ requests/s sustained. rclone doesn't retry these, so files fail. Fix: <code>--tpslimit 40</code>.</li>
+<li><b>Occasional dead connections</b> that sit silent until the timeout. Seen once in 70 runs (5-minute freeze). Fix: <code>--timeout 1m</code>.</li>
+<li><b>About 0.3 s per file</b> to open or download any file, however small. Parallelism is the only cure.</li>
+<li><b>Speed varies a lot through the day.</b> The same test ran anywhere from 1Ã— to 2Ã— its slowest speed across the evening.</li>
+<li><b>No change notifications.</b> Changes made elsewhere only appear when <code>--dir-cache-time</code> runs out.</li>
+<li><b>HTTP/2 is bad for Koofr</b>, especially single-stream and low-parallel transfers.</li>
+</ul>
+
+<h2>6. What wasn't tested</h2>
+<ul>
+<li><code>--buffer-size</code>, <code>--vfs-read-ahead</code> sizes, <code>--attr-timeout</code>, and <code>--use-mmap</code> were left at your current values.</li>
+<li>Explorer thumbnails, video seeking, and apps with lots of random reads. The tests used straight sequential reads.</li>
+<li>Whether <code>--timeout 1m</code> cuts off a legitimately slow transfer. It shouldn't, because the timeout only counts time with no data moving at all.</li>
+<li>Multi-hour stability with the new flags. Watch the log for a few days after switching.</li>
+</ul>
+
+<h2>7. Files on E:\rclone-lab</h2>
+<div class="wrap"><table>
+<tr><td><code>REPORT.html</code></td><td>this page</td></tr>
+<tr><td><code>Mount-Koofr.recommended.ps1</code></td><td>your mount script with the recommended flags (not installed)</td></tr>
+<tr><td><code>results\results.csv</code></td><td>every timed run: time, ID, settings, size, seconds, speed, exit code, notes</td></tr>
+<tr><td><code>logs\</code></td><td>the full rclone log for each run (named by test ID) and each script's output</td></tr>
+<tr><td><code>scripts\</code></td><td><code>lab.ps1</code> (helpers), <code>10-upload</code>, <code>20-download</code>, <code>25-repeat</code>, <code>30-mount</code>, <code>40-mount-small-write</code>, <code>50-ab-read</code>, <code>60-tpslimit</code>. Run them again to re-test.</td></tr>
+</table></div>
+<p class="note">Sources: <a href="https://rclone.org/koofr/">rclone Koofr docs</a> Â· <a href="https://rclone.org/commands/rclone_mount/">rclone mount / VFS docs</a> Â· <a href="https://rclone.org/docs/">rclone global flags</a> Â· <a href="https://rclone.org/changelog/">rclone changelog</a> Â· forum: <a href="https://forum.rclone.org/t/multithread-upload-speed-slowed-down-to-single-thread-speed-for-koofr/35427">Koofr multithread upload slowdown</a>, <a href="https://forum.rclone.org/t/download-transfer-speed-via-mount-20x-slower-than-via-copy-sync/39028">mount 20Ã— slower than copy</a>, <a href="https://forum.rclone.org/t/ways-how-to-improve-upload-speed-of-large-single-file-with-sync-copy/39116">large single-file upload</a>, <a href="https://forum.rclone.org/t/disable-http2-in-conf-file/49149">disable HTTP/2 in config</a>, <a href="https://forum.rclone.org/t/frq-disable-http2-as-standard/49467">HTTP/2 off by default request</a>.</p>
+</main>
+</body>
+</html>

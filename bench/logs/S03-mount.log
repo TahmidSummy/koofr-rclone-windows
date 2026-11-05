@@ -1,0 +1,9 @@
+﻿2026/11/05 20:33:13 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/05 20:33:13 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/05 20:33:13 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+The service rclone has been started.
+2026/11/05 20:33:28 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 51 (was 51) in use 1, to upload 0, uploading 0, total size 3.125Mi (was 3.125Mi)
+2026/11/05 20:33:43 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 111 (was 111) in use 1, to upload 0, uploading 0, total size 6.875Mi (was 6.875Mi)
+2026/11/05 20:33:58 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 157 (was 157) in use 1, to upload 0, uploading 0, total size 9.750Mi (was 9.750Mi)
+2026/11/05 20:34:13 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 222 (was 222) in use 1, to upload 0, uploading 0, total size 13.812Mi (was 13.812Mi)
+2026/11/05 20:34:28 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 284 (was 284) in use 1, to upload 0, uploading 0, total size 17.688Mi (was 17.688Mi)

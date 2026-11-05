@@ -1,0 +1,449 @@
+﻿2026/11/05 19:19:48 INFO  : s001.bin: Copied (new)
+2026/11/05 19:19:48 INFO  : s004.bin: Copied (new)
+2026/11/05 19:19:48 INFO  : s003.bin: Copied (new)
+2026/11/05 19:19:48 INFO  : s002.bin: Copied (new)
+2026/11/05 19:19:49 INFO  : s005.bin: Copied (new)
+2026/11/05 19:19:49 INFO  : s006.bin: Copied (new)
+2026/11/05 19:19:49 INFO  : s008.bin: Copied (new)
+2026/11/05 19:19:49 INFO  : s007.bin: Copied (new)
+2026/11/05 19:19:50 INFO  : s009.bin: Copied (new)
+2026/11/05 19:19:50 INFO  : s010.bin: Copied (new)
+2026/11/05 19:19:50 INFO  : s012.bin: Copied (new)
+2026/11/05 19:19:50 INFO  : s011.bin: Copied (new)
+2026/11/05 19:19:51 INFO  : s013.bin: Copied (new)
+2026/11/05 19:19:51 INFO  : s014.bin: Copied (new)
+2026/11/05 19:19:51 INFO  : s016.bin: Copied (new)
+2026/11/05 19:19:51 INFO  : s015.bin: Copied (new)
+2026/11/05 19:19:51 INFO  : 
+Transferred:   	    1.188 MiB / 18.750 MiB, 6%, 192 KiB/s, ETA 1m33s
+Checks:                 0 / 0, -, Listed 300
+Transferred:           16 / 300, 5%
+Elapsed time:         4.9s
+Transferring:
+ *                                      s017.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s018.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s019.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s020.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:19:51 INFO  : s017.bin: Copied (new)
+2026/11/05 19:19:51 INFO  : s020.bin: Copied (new)
+2026/11/05 19:19:51 INFO  : s018.bin: Copied (new)
+2026/11/05 19:19:52 INFO  : s019.bin: Copied (new)
+2026/11/05 19:19:52 INFO  : s021.bin: Copied (new)
+2026/11/05 19:19:52 INFO  : s022.bin: Copied (new)
+2026/11/05 19:19:52 INFO  : s023.bin: Copied (new)
+2026/11/05 19:19:52 INFO  : s024.bin: Copied (new)
+2026/11/05 19:19:53 INFO  : s027.bin: Copied (new)
+2026/11/05 19:19:53 INFO  : s025.bin: Copied (new)
+2026/11/05 19:19:53 INFO  : s026.bin: Copied (new)
+2026/11/05 19:19:53 INFO  : s028.bin: Copied (new)
+2026/11/05 19:19:54 INFO  : s029.bin: Copied (new)
+2026/11/05 19:19:54 INFO  : s030.bin: Copied (new)
+2026/11/05 19:19:54 INFO  : s032.bin: Copied (new)
+2026/11/05 19:19:54 INFO  : s031.bin: Copied (new)
+2026/11/05 19:19:54 INFO  : s033.bin: Copied (new)
+2026/11/05 19:19:55 INFO  : s034.bin: Copied (new)
+2026/11/05 19:19:55 INFO  : s035.bin: Copied (new)
+2026/11/05 19:19:55 INFO  : s036.bin: Copied (new)
+2026/11/05 19:19:56 INFO  : s037.bin: Copied (new)
+2026/11/05 19:19:56 INFO  : 
+Transferred:   	    2.500 MiB / 18.750 MiB, 13%, 270.222 KiB/s, ETA 1m1s
+Checks:                 0 / 0, -, Listed 300
+Transferred:           37 / 300, 12%
+Elapsed time:         9.9s
+Transferring:
+ *                                      s038.bin:100% / 64 KiB, 64 KiB/s, 0s
+ *                                      s039.bin:100% / 64 KiB, 64 KiB/s, 0s
+ *                                      s040.bin:100% / 64 KiB, 64 KiB/s, 0s
+ *                                      s041.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:19:56 INFO  : s038.bin: Copied (new)
+2026/11/05 19:19:56 INFO  : s040.bin: Copied (new)
+2026/11/05 19:19:56 INFO  : s039.bin: Copied (new)
+2026/11/05 19:19:56 INFO  : s042.bin: Copied (new)
+2026/11/05 19:19:57 INFO  : s044.bin: Copied (new)
+2026/11/05 19:19:57 INFO  : s043.bin: Copied (new)
+2026/11/05 19:19:57 INFO  : s041.bin: Copied (new)
+2026/11/05 19:19:57 INFO  : s046.bin: Copied (new)
+2026/11/05 19:19:57 INFO  : s045.bin: Copied (new)
+2026/11/05 19:19:57 INFO  : s047.bin: Copied (new)
+2026/11/05 19:19:58 INFO  : s048.bin: Copied (new)
+2026/11/05 19:19:58 INFO  : s050.bin: Copied (new)
+2026/11/05 19:19:58 INFO  : s049.bin: Copied (new)
+2026/11/05 19:19:58 INFO  : s051.bin: Copied (new)
+2026/11/05 19:19:58 INFO  : s052.bin: Copied (new)
+2026/11/05 19:19:59 INFO  : s054.bin: Copied (new)
+2026/11/05 19:19:59 INFO  : s053.bin: Copied (new)
+2026/11/05 19:19:59 INFO  : s055.bin: Copied (new)
+2026/11/05 19:20:00 INFO  : s056.bin: Copied (new)
+2026/11/05 19:20:00 INFO  : s057.bin: Copied (new)
+2026/11/05 19:20:00 INFO  : s058.bin: Copied (new)
+2026/11/05 19:20:00 INFO  : s059.bin: Copied (new)
+2026/11/05 19:20:01 INFO  : s061.bin: Copied (new)
+2026/11/05 19:20:01 INFO  : s062.bin: Copied (new)
+2026/11/05 19:20:01 INFO  : s060.bin: Copied (new)
+2026/11/05 19:20:01 INFO  : 
+Transferred:   	        4 MiB / 18.750 MiB, 21%, 269.714 KiB/s, ETA 56s
+Checks:                 0 / 0, -, Listed 300
+Transferred:           62 / 300, 21%
+Elapsed time:        14.9s
+Transferring:
+ *                                      s063.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s064.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s065.bin:  0% / 64 KiB, 0 B/s, -
+ *                                      s066.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:01 INFO  : s063.bin: Copied (new)
+2026/11/05 19:20:01 INFO  : s064.bin: Copied (new)
+2026/11/05 19:20:01 INFO  : s065.bin: Copied (new)
+2026/11/05 19:20:02 INFO  : s066.bin: Copied (new)
+2026/11/05 19:20:02 INFO  : s067.bin: Copied (new)
+2026/11/05 19:20:02 INFO  : s071.bin: Copied (new)
+2026/11/05 19:20:02 INFO  : s070.bin: Copied (new)
+2026/11/05 19:20:02 INFO  : s068.bin: Copied (new)
+2026/11/05 19:20:02 INFO  : s069.bin: Copied (new)
+2026/11/05 19:20:03 INFO  : s073.bin: Copied (new)
+2026/11/05 19:20:03 INFO  : s074.bin: Copied (new)
+2026/11/05 19:20:03 INFO  : s072.bin: Copied (new)
+2026/11/05 19:20:03 INFO  : s075.bin: Copied (new)
+2026/11/05 19:20:04 INFO  : s076.bin: Copied (new)
+2026/11/05 19:20:04 INFO  : s077.bin: Copied (new)
+2026/11/05 19:20:04 INFO  : s079.bin: Copied (new)
+2026/11/05 19:20:04 INFO  : s078.bin: Copied (new)
+2026/11/05 19:20:05 INFO  : s080.bin: Copied (new)
+2026/11/05 19:20:05 INFO  : s081.bin: Copied (new)
+2026/11/05 19:20:05 INFO  : s083.bin: Copied (new)
+2026/11/05 19:20:05 INFO  : s082.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : s084.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : s085.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : s086.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : 
+Transferred:   	    5.500 MiB / 18.750 MiB, 29%, 281.629 KiB/s, ETA 48s
+Checks:                 0 / 0, -, Listed 300
+Transferred:           86 / 300, 29%
+Elapsed time:        20.0s
+Transferring:
+ *                                      s087.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s088.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s089.bin:  0% / 64 KiB, 0 B/s, -
+ *                                      s090.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:06 INFO  : s087.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : s090.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : s089.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : s091.bin: Copied (new)
+2026/11/05 19:20:06 INFO  : s088.bin: Copied (new)
+2026/11/05 19:20:07 INFO  : s094.bin: Copied (new)
+2026/11/05 19:20:07 INFO  : s093.bin: Copied (new)
+2026/11/05 19:20:07 INFO  : s095.bin: Copied (new)
+2026/11/05 19:20:07 INFO  : s092.bin: Copied (new)
+2026/11/05 19:20:08 INFO  : s096.bin: Copied (new)
+2026/11/05 19:20:08 INFO  : s097.bin: Copied (new)
+2026/11/05 19:20:08 INFO  : s098.bin: Copied (new)
+2026/11/05 19:20:08 INFO  : s099.bin: Copied (new)
+2026/11/05 19:20:09 INFO  : s101.bin: Copied (new)
+2026/11/05 19:20:09 INFO  : s100.bin: Copied (new)
+2026/11/05 19:20:09 INFO  : s102.bin: Copied (new)
+2026/11/05 19:20:09 INFO  : s103.bin: Copied (new)
+2026/11/05 19:20:09 INFO  : s105.bin: Copied (new)
+2026/11/05 19:20:10 INFO  : s104.bin: Copied (new)
+2026/11/05 19:20:10 INFO  : s106.bin: Copied (new)
+2026/11/05 19:20:10 INFO  : s107.bin: Copied (new)
+2026/11/05 19:20:10 INFO  : s108.bin: Copied (new)
+2026/11/05 19:20:10 INFO  : s109.bin: Copied (new)
+2026/11/05 19:20:11 INFO  : s110.bin: Copied (new)
+2026/11/05 19:20:11 INFO  : 
+Transferred:   	    7.125 MiB / 18.750 MiB, 38%, 293.686 KiB/s, ETA 40s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          110 / 300, 37%
+Elapsed time:        24.9s
+Transferring:
+ *                                      s111.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s112.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s113.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s114.bin:100% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:11 INFO  : s111.bin: Copied (new)
+2026/11/05 19:20:11 INFO  : s112.bin: Copied (new)
+2026/11/05 19:20:11 INFO  : s114.bin: Copied (new)
+2026/11/05 19:20:11 INFO  : s113.bin: Copied (new)
+2026/11/05 19:20:12 INFO  : s115.bin: Copied (new)
+2026/11/05 19:20:12 INFO  : s117.bin: Copied (new)
+2026/11/05 19:20:12 INFO  : s116.bin: Copied (new)
+2026/11/05 19:20:12 INFO  : s118.bin: Copied (new)
+2026/11/05 19:20:12 INFO  : s119.bin: Copied (new)
+2026/11/05 19:20:13 INFO  : s121.bin: Copied (new)
+2026/11/05 19:20:13 INFO  : s122.bin: Copied (new)
+2026/11/05 19:20:13 INFO  : s123.bin: Copied (new)
+2026/11/05 19:20:13 INFO  : s120.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s124.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s125.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s126.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s127.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s130.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s128.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s129.bin: Copied (new)
+2026/11/05 19:20:15 INFO  : s131.bin: Copied (new)
+2026/11/05 19:20:16 INFO  : 
+Transferred:   	    8.438 MiB / 18.750 MiB, 45%, 277.677 KiB/s, ETA 38s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          131 / 300, 44%
+Elapsed time:        29.9s
+Transferring:
+ *                                      s132.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s133.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s134.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s135.bin:100% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:16 INFO  : s133.bin: Copied (new)
+2026/11/05 19:20:16 INFO  : s132.bin: Copied (new)
+2026/11/05 19:20:16 INFO  : s134.bin: Copied (new)
+2026/11/05 19:20:17 INFO  : s135.bin: Copied (new)
+2026/11/05 19:20:17 INFO  : s137.bin: Copied (new)
+2026/11/05 19:20:17 INFO  : s138.bin: Copied (new)
+2026/11/05 19:20:17 INFO  : s139.bin: Copied (new)
+2026/11/05 19:20:17 INFO  : s136.bin: Copied (new)
+2026/11/05 19:20:18 INFO  : s141.bin: Copied (new)
+2026/11/05 19:20:18 INFO  : s140.bin: Copied (new)
+2026/11/05 19:20:18 INFO  : s142.bin: Copied (new)
+2026/11/05 19:20:18 INFO  : s143.bin: Copied (new)
+2026/11/05 19:20:18 INFO  : s144.bin: Copied (new)
+2026/11/05 19:20:19 INFO  : s145.bin: Copied (new)
+2026/11/05 19:20:19 INFO  : s147.bin: Copied (new)
+2026/11/05 19:20:19 INFO  : s148.bin: Copied (new)
+2026/11/05 19:20:19 INFO  : s146.bin: Copied (new)
+2026/11/05 19:20:19 INFO  : s149.bin: Copied (new)
+2026/11/05 19:20:19 INFO  : s150.bin: Copied (new)
+2026/11/05 19:20:20 INFO  : s151.bin: Copied (new)
+2026/11/05 19:20:20 INFO  : s153.bin: Copied (new)
+2026/11/05 19:20:21 INFO  : s154.bin: Copied (new)
+2026/11/05 19:20:21 INFO  : s155.bin: Copied (new)
+2026/11/05 19:20:21 INFO  : 
+Transferred:   	    9.812 MiB / 18.750 MiB, 52%, 292.468 KiB/s, ETA 31s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          154 / 300, 51%
+Elapsed time:        34.9s
+Transferring:
+ *                                      s152.bin:100% / 64 KiB, 64 KiB/s, 0s
+ *                                      s156.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s157.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s158.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:21 INFO  : s152.bin: Copied (new)
+2026/11/05 19:20:21 INFO  : s156.bin: Copied (new)
+2026/11/05 19:20:22 INFO  : s157.bin: Copied (new)
+2026/11/05 19:20:22 INFO  : s158.bin: Copied (new)
+2026/11/05 19:20:22 INFO  : s159.bin: Copied (new)
+2026/11/05 19:20:22 INFO  : s160.bin: Copied (new)
+2026/11/05 19:20:22 INFO  : s161.bin: Copied (new)
+2026/11/05 19:20:23 INFO  : s163.bin: Copied (new)
+2026/11/05 19:20:23 INFO  : s162.bin: Copied (new)
+2026/11/05 19:20:23 INFO  : s164.bin: Copied (new)
+2026/11/05 19:20:24 INFO  : s166.bin: Copied (new)
+2026/11/05 19:20:24 INFO  : s165.bin: Copied (new)
+2026/11/05 19:20:24 INFO  : s168.bin: Copied (new)
+2026/11/05 19:20:24 INFO  : s167.bin: Copied (new)
+2026/11/05 19:20:25 INFO  : s169.bin: Copied (new)
+2026/11/05 19:20:25 INFO  : s170.bin: Copied (new)
+2026/11/05 19:20:25 INFO  : s171.bin: Copied (new)
+2026/11/05 19:20:25 INFO  : s172.bin: Copied (new)
+2026/11/05 19:20:25 INFO  : s174.bin: Copied (new)
+2026/11/05 19:20:25 INFO  : s173.bin: Copied (new)
+2026/11/05 19:20:26 INFO  : s176.bin: Copied (new)
+2026/11/05 19:20:26 INFO  : 
+Transferred:   	   11.125 MiB / 18.750 MiB, 59%, 275.570 KiB/s, ETA 28s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          175 / 300, 58%
+Elapsed time:        39.9s
+Transferring:
+ *                                      s175.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s177.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s178.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s179.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:26 INFO  : s175.bin: Copied (new)
+2026/11/05 19:20:26 INFO  : s178.bin: Copied (new)
+2026/11/05 19:20:26 INFO  : s177.bin: Copied (new)
+2026/11/05 19:20:27 INFO  : s179.bin: Copied (new)
+2026/11/05 19:20:27 INFO  : s180.bin: Copied (new)
+2026/11/05 19:20:27 INFO  : s181.bin: Copied (new)
+2026/11/05 19:20:27 INFO  : s182.bin: Copied (new)
+2026/11/05 19:20:27 INFO  : s183.bin: Copied (new)
+2026/11/05 19:20:28 INFO  : s184.bin: Copied (new)
+2026/11/05 19:20:28 INFO  : s185.bin: Copied (new)
+2026/11/05 19:20:28 INFO  : s186.bin: Copied (new)
+2026/11/05 19:20:28 INFO  : s187.bin: Copied (new)
+2026/11/05 19:20:29 INFO  : s188.bin: Copied (new)
+2026/11/05 19:20:29 INFO  : s189.bin: Copied (new)
+2026/11/05 19:20:29 INFO  : s190.bin: Copied (new)
+2026/11/05 19:20:29 INFO  : s191.bin: Copied (new)
+2026/11/05 19:20:30 INFO  : s192.bin: Copied (new)
+2026/11/05 19:20:30 INFO  : s194.bin: Copied (new)
+2026/11/05 19:20:30 INFO  : s193.bin: Copied (new)
+2026/11/05 19:20:30 INFO  : s195.bin: Copied (new)
+2026/11/05 19:20:30 INFO  : s196.bin: Copied (new)
+2026/11/05 19:20:31 INFO  : 
+Transferred:   	   12.500 MiB / 18.750 MiB, 67%, 279.648 KiB/s, ETA 22s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          196 / 300, 65%
+Elapsed time:        44.9s
+Transferring:
+ *                                      s197.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s198.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s199.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s200.bin:100% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:31 INFO  : s199.bin: Copied (new)
+2026/11/05 19:20:31 INFO  : s197.bin: Copied (new)
+2026/11/05 19:20:31 INFO  : s198.bin: Copied (new)
+2026/11/05 19:20:31 INFO  : s200.bin: Copied (new)
+2026/11/05 19:20:32 INFO  : s203.bin: Copied (new)
+2026/11/05 19:20:32 INFO  : s202.bin: Copied (new)
+2026/11/05 19:20:32 INFO  : s201.bin: Copied (new)
+2026/11/05 19:20:32 INFO  : s204.bin: Copied (new)
+2026/11/05 19:20:32 INFO  : s205.bin: Copied (new)
+2026/11/05 19:20:33 INFO  : s207.bin: Copied (new)
+2026/11/05 19:20:33 INFO  : s206.bin: Copied (new)
+2026/11/05 19:20:33 INFO  : s208.bin: Copied (new)
+2026/11/05 19:20:33 INFO  : s209.bin: Copied (new)
+2026/11/05 19:20:34 INFO  : s211.bin: Copied (new)
+2026/11/05 19:20:34 INFO  : s210.bin: Copied (new)
+2026/11/05 19:20:34 INFO  : s212.bin: Copied (new)
+2026/11/05 19:20:34 INFO  : s213.bin: Copied (new)
+2026/11/05 19:20:34 INFO  : s214.bin: Copied (new)
+2026/11/05 19:20:34 INFO  : s215.bin: Copied (new)
+2026/11/05 19:20:35 INFO  : s217.bin: Copied (new)
+2026/11/05 19:20:35 INFO  : s216.bin: Copied (new)
+2026/11/05 19:20:35 INFO  : s219.bin: Copied (new)
+2026/11/05 19:20:35 INFO  : s218.bin: Copied (new)
+2026/11/05 19:20:36 INFO  : s220.bin: Copied (new)
+2026/11/05 19:20:36 INFO  : s221.bin: Copied (new)
+2026/11/05 19:20:36 INFO  : 
+Transferred:   	       14 MiB / 18.750 MiB, 75%, 288.854 KiB/s, ETA 16s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          221 / 300, 74%
+Elapsed time:        50.0s
+Transferring:
+ *                                      s222.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s223.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s224.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s225.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:36 INFO  : s222.bin: Copied (new)
+2026/11/05 19:20:36 INFO  : s223.bin: Copied (new)
+2026/11/05 19:20:36 INFO  : s224.bin: Copied (new)
+2026/11/05 19:20:36 INFO  : s225.bin: Copied (new)
+2026/11/05 19:20:37 INFO  : s227.bin: Copied (new)
+2026/11/05 19:20:37 INFO  : s226.bin: Copied (new)
+2026/11/05 19:20:37 INFO  : s228.bin: Copied (new)
+2026/11/05 19:20:38 INFO  : s229.bin: Copied (new)
+2026/11/05 19:20:38 INFO  : s230.bin: Copied (new)
+2026/11/05 19:20:38 INFO  : s232.bin: Copied (new)
+2026/11/05 19:20:39 INFO  : s233.bin: Copied (new)
+2026/11/05 19:20:39 INFO  : s231.bin: Copied (new)
+2026/11/05 19:20:39 INFO  : s234.bin: Copied (new)
+2026/11/05 19:20:39 INFO  : s235.bin: Copied (new)
+2026/11/05 19:20:39 INFO  : s236.bin: Copied (new)
+2026/11/05 19:20:39 INFO  : s237.bin: Copied (new)
+2026/11/05 19:20:40 INFO  : s238.bin: Copied (new)
+2026/11/05 19:20:40 INFO  : s239.bin: Copied (new)
+2026/11/05 19:20:40 INFO  : s241.bin: Copied (new)
+2026/11/05 19:20:40 INFO  : s240.bin: Copied (new)
+2026/11/05 19:20:41 INFO  : s243.bin: Copied (new)
+2026/11/05 19:20:41 INFO  : 
+Transferred:   	   15.312 MiB / 18.750 MiB, 82%, 285.175 KiB/s, ETA 12s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          242 / 300, 81%
+Elapsed time:        54.9s
+Transferring:
+ *                                      s242.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s244.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s245.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s246.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:41 INFO  : s242.bin: Copied (new)
+2026/11/05 19:20:41 INFO  : s244.bin: Copied (new)
+2026/11/05 19:20:41 INFO  : s245.bin: Copied (new)
+2026/11/05 19:20:41 INFO  : s246.bin: Copied (new)
+2026/11/05 19:20:41 INFO  : s248.bin: Copied (new)
+2026/11/05 19:20:42 INFO  : s247.bin: Copied (new)
+2026/11/05 19:20:42 INFO  : s249.bin: Copied (new)
+2026/11/05 19:20:42 INFO  : s250.bin: Copied (new)
+2026/11/05 19:20:42 INFO  : s252.bin: Copied (new)
+2026/11/05 19:20:42 INFO  : s251.bin: Copied (new)
+2026/11/05 19:20:42 INFO  : s253.bin: Copied (new)
+2026/11/05 19:20:43 INFO  : s254.bin: Copied (new)
+2026/11/05 19:20:43 INFO  : s255.bin: Copied (new)
+2026/11/05 19:20:43 INFO  : s256.bin: Copied (new)
+2026/11/05 19:20:43 INFO  : s257.bin: Copied (new)
+2026/11/05 19:20:43 INFO  : s258.bin: Copied (new)
+2026/11/05 19:20:43 INFO  : s259.bin: Copied (new)
+2026/11/05 19:20:44 INFO  : s260.bin: Copied (new)
+2026/11/05 19:20:44 INFO  : s261.bin: Copied (new)
+2026/11/05 19:20:44 INFO  : s262.bin: Copied (new)
+2026/11/05 19:20:44 INFO  : s263.bin: Copied (new)
+2026/11/05 19:20:45 INFO  : s265.bin: Copied (new)
+2026/11/05 19:20:45 INFO  : s266.bin: Copied (new)
+2026/11/05 19:20:45 INFO  : s264.bin: Copied (new)
+2026/11/05 19:20:45 INFO  : s267.bin: Copied (new)
+2026/11/05 19:20:45 INFO  : s269.bin: Copied (new)
+2026/11/05 19:20:46 INFO  : 
+Transferred:   	       17 MiB / 18.750 MiB, 91%, 298.031 KiB/s, ETA 6s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          268 / 300, 89%
+Elapsed time:        59.9s
+Transferring:
+ *                                      s268.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s270.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s271.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s272.bin:100% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:46 INFO  : s270.bin: Copied (new)
+2026/11/05 19:20:46 INFO  : s271.bin: Copied (new)
+2026/11/05 19:20:46 INFO  : s268.bin: Copied (new)
+2026/11/05 19:20:46 INFO  : s272.bin: Copied (new)
+2026/11/05 19:20:47 INFO  : s274.bin: Copied (new)
+2026/11/05 19:20:47 INFO  : s273.bin: Copied (new)
+2026/11/05 19:20:47 INFO  : s275.bin: Copied (new)
+2026/11/05 19:20:47 INFO  : s277.bin: Copied (new)
+2026/11/05 19:20:47 INFO  : s276.bin: Copied (new)
+2026/11/05 19:20:48 INFO  : s280.bin: Copied (new)
+2026/11/05 19:20:48 INFO  : s281.bin: Copied (new)
+2026/11/05 19:20:48 INFO  : s278.bin: Copied (new)
+2026/11/05 19:20:48 INFO  : s279.bin: Copied (new)
+2026/11/05 19:20:49 INFO  : s283.bin: Copied (new)
+2026/11/05 19:20:49 INFO  : s284.bin: Copied (new)
+2026/11/05 19:20:49 INFO  : s285.bin: Copied (new)
+2026/11/05 19:20:49 INFO  : s282.bin: Copied (new)
+2026/11/05 19:20:49 INFO  : s287.bin: Copied (new)
+2026/11/05 19:20:50 INFO  : s288.bin: Copied (new)
+2026/11/05 19:20:50 INFO  : s289.bin: Copied (new)
+2026/11/05 19:20:51 INFO  : s290.bin: Copied (new)
+2026/11/05 19:20:51 INFO  : s292.bin: Copied (new)
+2026/11/05 19:20:51 INFO  : s286.bin: Copied (new)
+2026/11/05 19:20:51 INFO  : 
+Transferred:   	   18.375 MiB / 18.750 MiB, 98%, 294.272 KiB/s, ETA 1s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          291 / 300, 97%
+Elapsed time:       1m5.0s
+Transferring:
+ *                                      s291.bin:100% / 64 KiB, 64 KiB/s, 0s
+ *                                      s293.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s294.bin:100% / 64 KiB, 0 B/s, -
+ *                                      s295.bin:  0% / 64 KiB, 0 B/s, -
+
+2026/11/05 19:20:51 INFO  : s291.bin: Copied (new)
+2026/11/05 19:20:52 INFO  : s295.bin: Copied (new)
+2026/11/05 19:20:52 INFO  : s294.bin: Copied (new)
+2026/11/05 19:20:52 INFO  : s293.bin: Copied (new)
+2026/11/05 19:20:52 INFO  : s296.bin: Copied (new)
+2026/11/05 19:20:52 INFO  : s298.bin: Copied (new)
+2026/11/05 19:20:52 INFO  : s297.bin: Copied (new)
+2026/11/05 19:20:53 INFO  : s299.bin: Copied (new)
+2026/11/05 19:20:53 INFO  : s300.bin: Copied (new)
+2026/11/05 19:20:53 INFO  : 
+Transferred:   	   18.750 MiB / 18.750 MiB, 100%, 281.889 KiB/s, ETA 0s
+Checks:                 0 / 0, -, Listed 300
+Transferred:          300 / 300, 100%
+Elapsed time:       1m7.4s
+

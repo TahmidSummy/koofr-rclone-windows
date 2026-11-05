@@ -1,0 +1,8 @@
+﻿using rclone v1.75.2
+AB175-cur-r1              107.0s     9.6 MiB/s exit=0 
+AB175-s16x8-r1             38.2s    26.8 MiB/s exit=0 
+AB175-s8x32-r1             34.5s    29.7 MiB/s exit=0 
+AB175-cur-r2               91.3s    11.2 MiB/s exit=0 
+AB175-s16x8-r2             37.3s    27.5 MiB/s exit=0 
+AB175-s8x32-r2             36.9s    27.7 MiB/s exit=0 
+AB DONE

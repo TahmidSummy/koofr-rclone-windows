@@ -1,0 +1,14 @@
+﻿2026/11/05 20:37:14 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/05 20:37:14 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/05 20:37:14 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+The service rclone has been started.
+2026/11/05 20:37:29 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 47.996Mi (was 47.996Mi)
+2026/11/05 20:37:44 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 127.996Mi (was 127.996Mi)
+2026/11/05 20:37:59 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 252.996Mi (was 252.996Mi)
+2026/11/05 20:38:14 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 354.996Mi (was 354.996Mi)
+2026/11/05 20:38:29 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 415.996Mi (was 415.996Mi)
+2026/11/05 20:38:44 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 491.996Mi (was 491.996Mi)
+2026/11/05 20:38:59 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 578.996Mi (was 578.996Mi)
+2026/11/05 20:39:14 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 704.996Mi (was 704.996Mi)
+2026/11/05 20:39:29 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 805.996Mi (was 805.996Mi)
+2026/11/05 20:39:44 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 1 (was 1) in use 1, to upload 0, uploading 0, total size 891.996Mi (was 891.996Mi)

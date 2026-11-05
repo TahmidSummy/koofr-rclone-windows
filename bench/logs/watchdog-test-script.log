@@ -1,0 +1,18 @@
+﻿2026-11-05 22:23:03 INFO  [22996] launching rclone for W:
+2026-11-05 22:23:08 INFO  [22996] W: mounted after 5s (PID 2056)
+2026-11-05 22:23:09 INFO  [17780] refresh: folder listings cleared
+2026-11-05 22:23:09 INFO  [17780] TOAST: Koofr refreshed - Z: now shows the latest from Koofr. Press F5 in any open Explorer window.
+2026-11-05 22:23:40 WARN  [30876] W: is not responding - checking again in 30s
+2026-11-05 22:24:40 WARN  [30876] W: still frozen - restarting rclone
+2026-11-05 22:24:40 INFO  [30876] killing rclone PID 2056 for W:
+2026-11-05 22:24:40 INFO  [30876] launching rclone for W:
+2026-11-05 22:24:45 INFO  [30876] W: mounted after 5s (PID 18908)
+2026-11-05 22:24:45 INFO  [30876] TOAST: Koofr: W: was frozen - rclone was restarted and the drive is back.
+2026-11-05 22:24:46 INFO  [14248] launching rclone for W:
+2026-11-05 22:24:51 INFO  [14248] W: mounted after 5s (PID 15208)
+2026-11-05 22:24:51 INFO  [14248] TOAST: Koofr: W: had dropped - rclone had stopped. The drive has been remounted.
+2026-11-05 22:24:52 INFO  [24156] launching rclone for V:
+2026-11-05 22:24:57 ERROR [24156] rclone for V: exited (code 1): Failed to create file system for "nosuchremote:": didn't find section in config file ("nosuchremote")
+2026-11-05 22:24:57 INFO  [24156] TOAST: Koofr: V: failed to start - Failed to create file system for "nosuchremote:": didn't find section in config file ("nosuchremote")
+2026-11-05 22:24:58 INFO  [32072] health check: 1 freeze restarts, 1 drops, 1 failed mounts
+2026-11-05 22:24:58 INFO  [32072] TOAST: Koofr: worth a look - 1 freeze restarts, 1 drops, 1 failed mounts. Details in koofr-health.txt

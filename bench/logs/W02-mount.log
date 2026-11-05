@@ -1,0 +1,66 @@
+﻿2026/11/05 20:35:19 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/05 20:35:19 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/05 20:35:19 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+The service rclone has been started.
+2026/11/05 20:35:20 INFO  : up-mount/W02/m01.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m02.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m03.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m04.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m05.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m06.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m07.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m08.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m09.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m10.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m11.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m12.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m13.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m14.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m15.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m16.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m17.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m18.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m19.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:20 INFO  : up-mount/W02/m20.bin: vfs cache: queuing for upload in 10s
+2026/11/05 20:35:34 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 20 (was 20) in use 20, to upload 12, uploading 8, total size 500Mi (was 500Mi)
+2026/11/05 20:35:39 INFO  : up-mount/W02/m07.bin: Copied (new)
+2026/11/05 20:35:39 INFO  : up-mount/W02/m07.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:39 INFO  : up-mount/W02/m01.bin: Copied (new)
+2026/11/05 20:35:39 INFO  : up-mount/W02/m01.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:39 INFO  : up-mount/W02/m06.bin: Copied (new)
+2026/11/05 20:35:39 INFO  : up-mount/W02/m06.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:39 INFO  : up-mount/W02/m02.bin: Copied (new)
+2026/11/05 20:35:39 INFO  : up-mount/W02/m02.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:39 INFO  : up-mount/W02/m03.bin: Copied (new)
+2026/11/05 20:35:39 INFO  : up-mount/W02/m03.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:39 INFO  : up-mount/W02/m04.bin: Copied (new)
+2026/11/05 20:35:39 INFO  : up-mount/W02/m04.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:40 INFO  : up-mount/W02/m08.bin: Copied (new)
+2026/11/05 20:35:40 INFO  : up-mount/W02/m08.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:41 INFO  : up-mount/W02/m05.bin: Copied (new)
+2026/11/05 20:35:41 INFO  : up-mount/W02/m05.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:45 INFO  : up-mount/W02/m10.bin: Copied (new)
+2026/11/05 20:35:45 INFO  : up-mount/W02/m10.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:46 INFO  : up-mount/W02/m09.bin: Copied (new)
+2026/11/05 20:35:46 INFO  : up-mount/W02/m09.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:47 INFO  : up-mount/W02/m11.bin: Copied (new)
+2026/11/05 20:35:47 INFO  : up-mount/W02/m11.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:47 INFO  : up-mount/W02/m12.bin: Copied (new)
+2026/11/05 20:35:47 INFO  : up-mount/W02/m12.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:47 INFO  : up-mount/W02/m14.bin: Copied (new)
+2026/11/05 20:35:47 INFO  : up-mount/W02/m14.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:47 INFO  : up-mount/W02/m13.bin: Copied (new)
+2026/11/05 20:35:47 INFO  : up-mount/W02/m13.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:48 INFO  : up-mount/W02/m16.bin: Copied (new)
+2026/11/05 20:35:48 INFO  : up-mount/W02/m16.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:49 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 20 (was 20) in use 5, to upload 0, uploading 5, total size 500Mi (was 500Mi)
+2026/11/05 20:35:50 INFO  : up-mount/W02/m15.bin: Copied (new)
+2026/11/05 20:35:50 INFO  : up-mount/W02/m15.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:52 INFO  : up-mount/W02/m17.bin: Copied (new)
+2026/11/05 20:35:52 INFO  : up-mount/W02/m17.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:52 INFO  : up-mount/W02/m20.bin: Copied (new)
+2026/11/05 20:35:52 INFO  : up-mount/W02/m20.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:52 INFO  : up-mount/W02/m19.bin: Copied (new)
+2026/11/05 20:35:52 INFO  : up-mount/W02/m19.bin: vfs cache: upload succeeded try #1
+2026/11/05 20:35:53 INFO  : up-mount/W02/m18.bin: Copied (new)
+2026/11/05 20:35:53 INFO  : up-mount/W02/m18.bin: vfs cache: upload succeeded try #1

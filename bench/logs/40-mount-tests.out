@@ -1,0 +1,71 @@
+﻿
+Id  Desc                                              Seconds FilesPs Note              
+--  ----                                              ------- ------- ----              
+S01 List + read 300 x 64 KiB cold, your current flags  103.09    2.91 listing took 0.12s
+
+
+
+
+Id   Desc                                 Seconds
+--   ----                                 -------
+S01w Re-list same folder (warm dir cache)    0.01
+
+
+
+
+Id  Desc                                                    Seconds FilesPs Note              
+--  ----                                                    ------- ------- ----              
+S02 List + read 300 x 64 KiB cold, current + 16 chunks x 8M   71.28    4.21 listing took 0.10s
+
+
+
+
+Id   Desc                                 Seconds
+--   ----                                 -------
+S02w Re-list same folder (warm dir cache)    0.01
+
+
+
+
+Id  Desc                                                                Seconds FilesPs Note              
+--  ----                                                                ------- ------- ----              
+S03 List + read 300 x 64 KiB cold, current minus --vfs-fast-fingerprint   79.23    3.79 listing took 0.10s
+
+
+
+
+Id   Desc                                 Seconds
+--   ----                                 -------
+S03w Re-list same folder (warm dir cache)    0.01
+
+
+
+
+Id  Desc                                                                Seconds MiBps Note                                          
+--  ----                                                                ------- ----- ----                                          
+W01 Write 20 x 25 MiB via mount, your current flags (4 uploads at once)   43.58 11.47 copy to W: finished after 0.9s; rest is upload
+
+
+
+
+Id  Desc                                                 Seconds MiBps Note                                          
+--  ----                                                 ------- ----- ----                                          
+W02 Write 20 x 25 MiB via mount, current + --transfers 8   34.15 14.64 copy to W: finished after 0.7s; rest is upload
+
+
+
+
+Id  Desc                                                  Seconds MiBps Note                                          
+--  ----                                                  ------- ----- ----                                          
+W03 Write 20 x 25 MiB via mount, current + --transfers 16   27.09 18.46 copy to W: finished after 0.7s; rest is upload
+
+
+
+
+Id  Desc                                                             Seconds MiBps Note                                          
+--  ----                                                             ------- ----- ----                                          
+W04 Write 20 x 25 MiB via mount, --transfers 8 + --vfs-write-back 2s   18.18  27.5 copy to W: finished after 0.7s; rest is upload
+
+
+
+MOUNT PART 2 DONE

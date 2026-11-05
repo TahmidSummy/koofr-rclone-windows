@@ -1,0 +1,19 @@
+﻿2026/11/05 22:23:03 INFO  : Starting transaction limiter: max 40 transactions/s with burst 40
+2026/11/05 22:23:03 INFO  : Using --user koofr --pass XXXX as authenticated user
+2026/11/05 22:23:03 NOTICE: Serving remote control on http://127.0.0.1:5573/
+2026/11/05 22:23:03 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/05 22:23:03 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/05 22:23:03 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+2026/11/05 22:23:08 INFO  : /core/version: 127.0.0.1:50281: Unauthorized request from 
+2026/11/05 22:24:40 INFO  : Starting transaction limiter: max 40 transactions/s with burst 40
+2026/11/05 22:24:40 INFO  : Using --user koofr --pass XXXX as authenticated user
+2026/11/05 22:24:40 NOTICE: Serving remote control on http://127.0.0.1:5573/
+2026/11/05 22:24:41 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/05 22:24:41 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/05 22:24:41 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+2026/11/05 22:24:46 INFO  : Starting transaction limiter: max 40 transactions/s with burst 40
+2026/11/05 22:24:46 INFO  : Using --user koofr --pass XXXX as authenticated user
+2026/11/05 22:24:46 NOTICE: Serving remote control on http://127.0.0.1:5573/
+2026/11/05 22:24:46 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/05 22:24:46 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/05 22:24:46 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)

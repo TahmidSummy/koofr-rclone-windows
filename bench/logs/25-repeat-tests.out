@@ -1,0 +1,9 @@
+﻿D13b      5.69s    3.29 MiB/s    52.7 files/s  exit=0  got=18.8 MiB  429s=0
+D15b      4.04s    4.64 MiB/s    74.2 files/s  exit=0  got=18.8 MiB  429s=0
+D14b     14.63s    1.28 MiB/s    20.5 files/s  exit=0  got=18.8 MiB  429s=0
+D16      14.59s    1.28 MiB/s    20.6 files/s  exit=0  got=18.8 MiB  429s=0
+D03b     33.63s   30.45 MiB/s     0.0 files/s  exit=0  got=1,024.0 MiB  429s=0
+D01b     62.30s   16.44 MiB/s     0.0 files/s  exit=0  got=1,024.0 MiB  429s=0
+D05b     28.39s   36.07 MiB/s     0.0 files/s  exit=0  got=1,024.0 MiB  429s=0
+D07b     26.56s   38.56 MiB/s     0.0 files/s  exit=0  got=1,024.0 MiB  429s=0
+REPEATS DONE

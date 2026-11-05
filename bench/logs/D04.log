@@ -1,0 +1,88 @@
+﻿2026/11/05 19:31:44 INFO  : Writing sparse files: use --local-no-sparse or --multi-thread-streams 0 to disable
+2026/11/05 19:31:49 INFO  : 
+Transferred:   	   82.375 MiB / 1 GiB, 8%, 10.531 MiB/s, ETA 1m29s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:         4.9s
+Transferring:
+ *                                     big1g.bin:  8% / 1 GiB, 12.375 MiB/s, 1m16s
+
+2026/11/05 19:31:54 INFO  : 
+Transferred:   	  236.375 MiB / 1 GiB, 23%, 23.708 MiB/s, ETA 33s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:         9.9s
+Transferring:
+ *                                     big1g.bin: 23% / 1 GiB, 23.778 MiB/s, 33s
+
+2026/11/05 19:31:59 INFO  : 
+Transferred:   	  423.500 MiB / 1 GiB, 41%, 26.911 MiB/s, ETA 22s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        14.9s
+Transferring:
+ *                                     big1g.bin: 41% / 1 GiB, 27.357 MiB/s, 21s
+
+2026/11/05 19:32:04 INFO  : 
+Transferred:   	      523 MiB / 1 GiB, 51%, 26.202 MiB/s, ETA 19s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        19.9s
+Transferring:
+ *                                     big1g.bin: 51% / 1 GiB, 26.186 MiB/s, 19s
+
+2026/11/05 19:32:09 INFO  : 
+Transferred:   	  666.625 MiB / 1 GiB, 65%, 26.807 MiB/s, ETA 13s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        24.9s
+Transferring:
+ *                                     big1g.bin: 65% / 1 GiB, 27.021 MiB/s, 13s
+
+2026/11/05 19:32:14 INFO  : 
+Transferred:   	  787.250 MiB / 1 GiB, 77%, 26.705 MiB/s, ETA 8s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        29.9s
+Transferring:
+ *                                     big1g.bin: 76% / 1 GiB, 26.635 MiB/s, 8s
+
+2026/11/05 19:32:19 INFO  : 
+Transferred:   	  918.125 MiB / 1 GiB, 90%, 25.961 MiB/s, ETA 4s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        34.9s
+Transferring:
+ *                                     big1g.bin: 89% / 1 GiB, 26.226 MiB/s, 4s
+
+2026/11/05 19:32:24 INFO  : 
+Transferred:   	  997.875 MiB / 1 GiB, 97%, 23.906 MiB/s, ETA 1s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        39.9s
+Transferring:
+ *                                     big1g.bin: 97% / 1 GiB, 23.800 MiB/s, 1s
+
+2026/11/05 19:32:29 INFO  : 
+Transferred:   	 1019.500 MiB / 1 GiB, 100%, 18.844 MiB/s, ETA 0s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        44.9s
+Transferring:
+ *                                     big1g.bin: 99% / 1 GiB, 18.787 MiB/s, 0s
+
+2026/11/05 19:32:34 INFO  : 
+Transferred:   	        1 GiB / 1 GiB, 100%, 14.018 MiB/s, ETA 0s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        49.9s
+Transferring:
+ *                                     big1g.bin:100% / 1 GiB, 13.951 MiB/s, 0s
+
+2026/11/05 19:32:34 INFO  : big1g.bin: Multi-thread Copied (new)
+2026/11/05 19:32:34 INFO  : 
+Transferred:   	        1 GiB / 1 GiB, 100%, 13.142 MiB/s, ETA 0s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            1 / 1, 100%
+Elapsed time:        50.2s
+

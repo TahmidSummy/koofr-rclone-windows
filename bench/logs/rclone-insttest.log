@@ -1,0 +1,6 @@
+﻿2026/11/05 23:19:00 INFO  : Starting transaction limiter: max 40 transactions/s with burst 40
+2026/11/05 23:19:00 INFO  : Using --user koofr --pass XXXX as authenticated user
+2026/11/05 23:19:00 NOTICE: Serving remote control on http://127.0.0.1:5579/
+2026/11/05 23:19:01 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/05 23:19:01 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/05 23:19:01 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)

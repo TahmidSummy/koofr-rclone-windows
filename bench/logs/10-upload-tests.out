@@ -1,0 +1,86 @@
+﻿
+Id  Desc                                                   Seconds MiBps FilesPs Exit
+--  ----                                                   ------- ----- ------- ----
+U01 300 x 64 KiB, HTTP/2 ON, 4 transfers (rclone defaults)    47.9  0.39    6.26    0
+
+
+
+
+Id  Desc                                                       Seconds MiBps FilesPs Exit
+--  ----                                                       ------- ----- ------- ----
+U02 300 x 64 KiB, HTTP/2 OFF, 4 transfers (your current mount)  348.47  0.05    0.86    0
+
+
+
+
+Id  Desc                                  Seconds MiBps FilesPs Exit
+--  ----                                  ------- ----- ------- ----
+U03 300 x 64 KiB, HTTP/2 OFF, 8 transfers   24.17  0.78   12.41    0
+
+
+
+
+Id  Desc                                   Seconds MiBps FilesPs Exit
+--  ----                                   ------- ----- ------- ----
+U04 300 x 64 KiB, HTTP/2 OFF, 16 transfers   13.77  1.36   21.79    0
+
+
+
+
+Id  Desc                                   Seconds MiBps FilesPs Exit
+--  ----                                   ------- ----- ------- ----
+U05 300 x 64 KiB, HTTP/2 OFF, 32 transfers    8.05  2.33   37.29    0
+
+
+
+
+Id  Desc                                  Seconds MiBps FilesPs Exit
+--  ----                                  ------- ----- ------- ----
+U06 300 x 64 KiB, HTTP/2 ON, 16 transfers   11.75   1.6   25.53    0
+
+
+
+
+Id  Desc                                Seconds MiBps FilesPs Exit
+--  ----                                ------- ----- ------- ----
+U07 20 x 25 MiB, HTTP/2 ON, 4 transfers   62.86  7.95    0.32    0
+
+
+
+
+Id  Desc                                 Seconds MiBps FilesPs Exit
+--  ----                                 ------- ----- ------- ----
+U08 20 x 25 MiB, HTTP/2 OFF, 4 transfers   49.95 10.01     0.4    0
+
+
+
+
+Id  Desc                                 Seconds MiBps FilesPs Exit
+--  ----                                 ------- ----- ------- ----
+U09 20 x 25 MiB, HTTP/2 OFF, 8 transfers   34.31 14.57    0.58    0
+
+
+
+
+Id  Desc                                  Seconds MiBps FilesPs Exit
+--  ----                                  ------- ----- ------- ----
+U10 20 x 25 MiB, HTTP/2 OFF, 16 transfers   32.03 15.61    0.62    0
+
+
+
+
+Id  Desc                                 Seconds MiBps FilesPs Exit
+--  ----                                 ------- ----- ------- ----
+U11 1 x 1 GiB, HTTP/2 ON (single stream)  317.88  3.22       0    0
+
+
+
+
+Id  Desc                                  Seconds MiBps FilesPs Exit
+--  ----                                  ------- ----- ------- ----
+U12 1 x 1 GiB, HTTP/2 OFF (single stream)    98.4 10.41    0.01    0
+
+
+
+seed exit: 0
+UPLOAD TESTS DONE

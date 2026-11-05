@@ -1,0 +1,57 @@
+﻿
+Id  Desc                                Seconds MiBps
+--  ----                                ------- -----
+M01 1 GiB cold read, your current flags   41.92 24.43
+
+
+
+
+Id   Desc                                                          Seconds   MiBps
+--   ----                                                          -------   -----
+M01w 1 GiB warm read (2nd time, from E: cache), your current flags     0.4 2570.05
+
+
+
+
+Id  Desc                                 Seconds MiBps
+--  ----                                 ------- -----
+M02 1 GiB cold read, current + HTTP/2 ON   57.99 17.66
+
+
+
+
+Id  Desc                                               Seconds MiBps
+--  ----                                               ------- -----
+M03 1 GiB cold read, current + 4 parallel chunks x 16M   56.27  18.2
+
+
+
+
+Id  Desc                                               Seconds MiBps
+--  ----                                               ------- -----
+M04 1 GiB cold read, current + 8 parallel chunks x 16M   44.83 22.84
+
+
+
+
+Id  Desc                                               Seconds MiBps
+--  ----                                               ------- -----
+M05 1 GiB cold read, current + 16 parallel chunks x 8M   31.09 32.94
+
+
+
+Exception calling "Read" with "3" argument(s): "The operation was canceled."
+At E:\rclone-lab\scripts\lab.ps1:63 char:19
++     try { while (($n = $fs.Read($buf, 0, $buf.Length)) -gt 0) { $tota ...
++                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : OperationCanceledException
+ 
+
+Id  Desc                                               Seconds MiBps
+--  ----                                               ------- -----
+M07 1 GiB cold read, cache mode writes (no read cache)   62.86 16.29
+
+
+
+READ TESTS DONE

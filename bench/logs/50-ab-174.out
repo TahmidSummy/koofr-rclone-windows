@@ -1,0 +1,8 @@
+﻿using rclone v1.74.2
+AB174-cur-r1              160.1s     6.4 MiB/s exit=0 
+AB174-s16x8-r1             50.1s    20.4 MiB/s exit=0 
+AB174-s8x32-r1             45.3s    22.6 MiB/s exit=0 
+AB174-cur-r2              129.7s     7.9 MiB/s exit=0 
+AB174-s16x8-r2             43.3s    23.7 MiB/s exit=0 
+AB174-s8x32-r2             41.2s    24.8 MiB/s exit=0 
+AB DONE

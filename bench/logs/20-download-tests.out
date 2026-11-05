@@ -1,0 +1,122 @@
+﻿
+Id  Desc                                          Seconds MiBps FilesPs Exit
+--  ----                                          ------- ----- ------- ----
+D01 1 GiB, HTTP/2 ON, 4 streams (rclone defaults)   373.7  2.74       0    0
+
+
+
+
+Id  Desc                             Seconds MiBps FilesPs Exit
+--  ----                             ------- ----- ------- ----
+D02 1 GiB, HTTP/2 OFF, single stream  200.79   5.1       0    0
+
+
+
+
+Id  Desc                         Seconds MiBps FilesPs Exit
+--  ----                         ------- ----- ------- ----
+D03 1 GiB, HTTP/2 OFF, 4 streams   64.88 15.78    0.02    0
+
+
+
+
+Id  Desc                         Seconds MiBps FilesPs Exit
+--  ----                         ------- ----- ------- ----
+D04 1 GiB, HTTP/2 OFF, 8 streams   50.69  20.2    0.02    0
+
+
+
+
+Id  Desc                          Seconds MiBps FilesPs Exit
+--  ----                          ------- ----- ------- ----
+D05 1 GiB, HTTP/2 OFF, 16 streams   39.77 25.75    0.03    0
+
+
+
+
+Id  Desc                                     Seconds MiBps FilesPs Exit
+--  ----                                     ------- ----- ------- ----
+D06 1 GiB, HTTP/2 OFF, 8 streams, 16M chunks   40.38 25.36    0.02    0
+
+
+
+
+Id  Desc                         Seconds MiBps FilesPs Exit
+--  ----                         ------- ----- ------- ----
+D07 1 GiB, HTTP/2 ON, 16 streams   35.57 28.79    0.03    0
+
+
+
+
+Id  Desc                                 Seconds MiBps FilesPs Exit
+--  ----                                 ------- ----- ------- ----
+D08 20 x 25 MiB, HTTP/2 OFF, 4 transfers   35.44 14.11    0.56    0
+
+
+
+
+Id  Desc                                 Seconds MiBps FilesPs Exit
+--  ----                                 ------- ----- ------- ----
+D09 20 x 25 MiB, HTTP/2 OFF, 8 transfers   23.54 21.24    0.85    0
+
+
+
+
+Id  Desc                                  Seconds MiBps FilesPs Exit
+--  ----                                  ------- ----- ------- ----
+D10 20 x 25 MiB, HTTP/2 OFF, 16 transfers   21.91 22.82    0.91    0
+
+
+
+
+Id  Desc                                Seconds MiBps FilesPs Exit
+--  ----                                ------- ----- ------- ----
+D11 20 x 25 MiB, HTTP/2 ON, 8 transfers   20.81 24.03    0.96    0
+
+
+
+
+Id  Desc                                  Seconds MiBps FilesPs Exit
+--  ----                                  ------- ----- ------- ----
+D12 300 x 64 KiB, HTTP/2 OFF, 4 transfers   23.38   0.8   12.83    0
+
+
+
+
+Id  Desc                                   Seconds MiBps FilesPs Exit
+--  ----                                   ------- ----- ------- ----
+D13 300 x 64 KiB, HTTP/2 OFF, 16 transfers    5.57  3.37   53.87    0
+
+
+
+
+Id  Desc                                   Seconds MiBps FilesPs Exit
+--  ----                                   ------- ----- ------- ----
+D14 300 x 64 KiB, HTTP/2 OFF, 32 transfers    3.88  4.83   77.24    1
+
+
+
+  WARNING: D14 got 16646144 bytes, expected 19660800
+
+Id  Desc                                  Seconds MiBps FilesPs Exit
+--  ----                                  ------- ----- ------- ----
+D15 300 x 64 KiB, HTTP/2 ON, 16 transfers    0.98 19.16  306.55    1
+
+
+
+  WARNING: D15 got 0 bytes, expected 19660800
+
+Id  Desc                            Seconds FilesPs Exit
+--  ----                            ------- ------- ----
+L01 List 300-file folder, HTTP/2 ON    0.32  945.54    0
+
+
+
+
+Id  Desc                             Seconds FilesPs Exit
+--  ----                             ------- ------- ----
+L02 List 300-file folder, HTTP/2 OFF    0.53  569.83    0
+
+
+
+DOWNLOAD TESTS DONE

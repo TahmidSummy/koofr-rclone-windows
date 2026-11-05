@@ -1,0 +1,56 @@
+﻿2026/11/05 19:40:59 INFO  : Writing sparse files: use --local-no-sparse or --multi-thread-streams 0 to disable
+2026/11/05 19:41:04 INFO  : 
+Transferred:   	  159.750 MiB / 1 GiB, 16%, 31.950 MiB/s, ETA 27s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:         5.0s
+Transferring:
+ *                                     big1g.bin: 15% / 1 GiB, 30.031 MiB/s, 28s
+
+2026/11/05 19:41:09 INFO  : 
+Transferred:   	  376.375 MiB / 1 GiB, 37%, 36.486 MiB/s, ETA 17s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:         9.9s
+Transferring:
+ *                                     big1g.bin: 36% / 1 GiB, 36.694 MiB/s, 17s
+
+2026/11/05 19:41:14 INFO  : 
+Transferred:   	  586.375 MiB / 1 GiB, 57%, 37.438 MiB/s, ETA 11s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        14.9s
+Transferring:
+ *                                     big1g.bin: 57% / 1 GiB, 37.589 MiB/s, 11s
+
+2026/11/05 19:41:19 INFO  : 
+Transferred:   	  782.125 MiB / 1 GiB, 76%, 38.606 MiB/s, ETA 6s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        19.9s
+Transferring:
+ *                                     big1g.bin: 76% / 1 GiB, 38.751 MiB/s, 6s
+
+2026/11/05 19:41:24 INFO  : 
+Transferred:   	  936.875 MiB / 1 GiB, 91%, 36.057 MiB/s, ETA 2s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        24.9s
+Transferring:
+ *                                     big1g.bin: 91% / 1 GiB, 36.243 MiB/s, 2s
+
+2026/11/05 19:41:29 INFO  : 
+Transferred:   	        1 GiB / 1 GiB, 100%, 32.950 MiB/s, ETA 0s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            0 / 1, 0%
+Elapsed time:        29.9s
+Transferring:
+ *                                     big1g.bin:100% / 1 GiB, 32.970 MiB/s, 0s
+
+2026/11/05 19:41:32 INFO  : big1g.bin: Multi-thread Copied (new)
+2026/11/05 19:41:32 INFO  : 
+Transferred:   	        1 GiB / 1 GiB, 100%, 25.833 MiB/s, ETA 0s
+Checks:                 0 / 0, -, Listed 1
+Transferred:            1 / 1, 100%
+Elapsed time:        33.3s
+

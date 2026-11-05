@@ -1,0 +1,8 @@
+# never commit rclone config or secrets
+rclone.conf
+*.pass
+# local test data / caches if someone runs the bench inside the repo
+data/
+cache/
+dl/
+*.bin
