@@ -51,7 +51,7 @@ $MountFlags = @(
     '--transfers', '16',                     # upload 16 files at once from the cache (W01 -> W03)
     '--tpslimit', '40',                      # stay under Koofr's 429 rate limit (D14/D15 failed, D17 ok)
     '--tpslimit-burst', '40',
-    '--timeout', '1m',                       # drop a dead connection after 1 min, not 5 (U02)
+    '--timeout', '30m',                      # MUST outlast Koofr folder renames (~11 ms/file). 1m deleted files (RESEARCH.md §13, Y1/Y2). Don't lower.
     '--vfs-read-chunk-streams', '16',        # read big files in 16 parallel pieces, ~3x faster (AB tests)
     '--vfs-read-chunk-size', '8M',
     '--dir-cache-time', '1h',                # trust folder listings for an hour (Koofr has no change notify)

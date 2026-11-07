@@ -17,6 +17,9 @@
 10. [Limits of this study](#10-limits-of-this-study)
 11. [Reproducing the tests](#11-reproducing-the-tests)
 12. [Sources](#12-sources)
+13. [Incident: folder renames deleted files (2026-11-07)](#13-incident-folder-renames-deleted-files-2026-11-07)
+
+> **Correction, 7 Nov 2026:** this study first recommended `--timeout 1m`. Two days later, renaming an 11,000-file folder through the drive **deleted 16 files** because of it. The setting is now `--timeout 30m`. §13 has the full story and the tests. Where older sections below mention `1m`, read them with that in mind.
 
 ---
 
@@ -29,7 +32,8 @@
 | That feature hung once on rclone 1.74.2 | M06 read froze for 39 min with the whole file already cached | Require rclone ≥ 1.75.2 (0 hangs in 7 runs) |
 | Koofr rate-limits at roughly 50+ requests/s, with no `Retry-After`. rclone doesn't retry the 429s | D14: 46/300 files failed. D15: 300/300 failed | `--tpslimit 40 --tpslimit-burst 40` (0 errors in 600 requests) |
 | Parallel uploads are the main upload lever, because Koofr has no multipart upload | Small files 4.4 → 37.3 files/s (4 → 32 transfers). Mount writes 11.5 → 18.5 MiB/s (4 → 16) | `--transfers 16` |
-| Dead connections can sit for rclone's full 5-minute timeout | U02: no progress for exactly 5 m 0 s, then done in about 40 s | `--timeout 1m` |
+| Dead connections can sit for rclone's full 5-minute timeout | U02: no progress for exactly 5 m 0 s, then done in about 40 s | ~~`--timeout 1m`~~ (superseded, see next row) |
+| **Koofr folder renames take ~11 ms per file, and a timeout shorter than that deletes files** | 8,000-file rename: 86.5 s, no loss (Y1). With rclone giving up early: 8 of 2,000 files deleted (Y2). For real: 16 files deleted with `1m` | **`--timeout 30m`** (§13) |
 | Koofr has a fixed ~0.3 s per-file cost | Downloads 12.8 files/s at 4 transfers ≈ 0.31 s/file/stream (D12). Mount sequential opens 2.9 files/s ≈ 0.34 s/file (S01) | Nothing to tune. Parallelism is the only cure |
 | Koofr speed varies up to ~2× across an evening | D03 15.8 → 30.5 MiB/s, same settings, 70 min apart | Repeat and interleave comparisons |
 | Koofr has no change notifications | rclone log: `poll-interval is not supported by this remote`. Backend feature `ChangeNotify: false` | Refresh shortcut (`vfs/forget` over the rc API) |
@@ -263,7 +267,7 @@ A mount with every recommended flag, on rclone 1.75.2: a cold 1 GiB read ran at 
 ## 7. Problems and incidents during testing
 
 ### 7.1 The 5-minute stall (U02)
-The rclone log shows `Transferred: 0 / 300` in every stats line from 18:58:56 until about 19:03:55, with nothing moving. Then all 300 files went through in about 43 s. Five minutes is exactly rclone's default `--timeout`, the IO idle timeout. A connection went dead silently, and rclone waited the full timeout before abandoning it. The re-run (U02b) took 68 s with no stall. We couldn't reproduce it on demand. **Mitigation:** `--timeout 1m`.
+The rclone log shows `Transferred: 0 / 300` in every stats line from 18:58:56 until about 19:03:55, with nothing moving. Then all 300 files went through in about 43 s. Five minutes is exactly rclone's default `--timeout`, the IO idle timeout. A connection went dead silently, and rclone waited the full timeout before abandoning it. The re-run (U02b) took 68 s with no stall. We couldn't reproduce it on demand. **Mitigation at the time:** `--timeout 1m`. **That was a mistake.** `--timeout` also limits how long rclone waits for Koofr to answer a folder move, and a big move takes minutes. See §13. The value is now `30m`.
 
 ### 7.2 Rate limiting (D14/D15)
 See §6.3. It also showed that **one heavy test can break the next one**, since D15 failed purely because D14 had just tripped the limiter. From then on, heavy tests had pauses between them (90 s, then 20 s between runs).
@@ -351,7 +355,7 @@ The flags and the reason for each are in [`config/mount-flags.md`](../config/mou
 | `--transfers` | 4 → **16** |
 | `--vfs-read-chunk-streams` / `--vfs-read-chunk-size` | off / 128M → **16 / 8M** |
 | `--tpslimit` / `--tpslimit-burst` | none → **40 / 40** |
-| `--timeout` | 5m → **1m** |
+| `--timeout` | 5m → ~~1m~~ → **30m** (§13) |
 | `--vfs-cache-min-free-space` | none → **10G** |
 | `--vfs-cache-poll-interval` | 15s → **1m** |
 | `--log-file-max-size` / `--log-file-max-backups` | none → **5M / 3** |
@@ -366,7 +370,8 @@ The flags and the reason for each are in [`config/mount-flags.md`](../config/mou
 | Folder listing | 0.1 s | 0.1 s (unchanged) |
 | Re-opening a cached file | instant | instant (unchanged) |
 | Burst of many files | 429 failures | 0 failures |
-| Dead connection | up to 5 min frozen | ≤ 1 min |
+| Dead connection | up to 5 min frozen | up to 30 min (the price of safe renames, §13) |
+| Renaming an 11,000-file folder | slow, but safe with the 5m default | ~2 min Explorer freeze, safe (with `1m` it deleted files) |
 | rclone crash | drive gone until the next logon | back within 15 min, with a notification |
 
 ---
@@ -375,7 +380,7 @@ The flags and the reason for each are in [`config/mount-flags.md`](../config/mou
 - **One location, one evening.** Results come from one connection (770/110 Mbit, 29 ms) between 19:00 and 21:00. A very different connection, especially with higher latency, should re-run `bench/50-ab-read-tests.ps1` and `bench/60-tpslimit-test.ps1`.
 - **Small number of runs.** 1–4 runs per setting, which is enough to see 2× and larger effects, not small ones.
 - **Not tested:** `--buffer-size`, `--vfs-read-ahead` sizes, `--attr-timeout`, `--use-mmap`, random-access workloads (video seeking, databases), Explorer thumbnail storms, multi-hour soak with the new flags, `override.disable_http2` in the config file, and Koofr's limit for other request types (listings, uploads).
-- **The `--timeout 1m` choice** is reasoned from one observed stall, not a reproduced one.
+- **The `--timeout 1m` choice** was reasoned from one observed stall, and nothing in the benchmark suite renamed a big folder, so the side effect went unseen until it hit real data (§13). Lesson: test a flag against every operation it touches, not only the one it was chosen for.
 - **Koofr's rate limit** was observed, not documented by Koofr. It may change.
 
 ---
@@ -394,3 +399,45 @@ See [`bench/README.md`](../bench/README.md). In short: set `KOOFR_LAB` to a lab 
   - [Disable HTTP2 in conf file](https://forum.rclone.org/t/disable-http2-in-conf-file/49149)
   - [FRQ: --disable-http2 as standard](https://forum.rclone.org/t/frq-disable-http2-as-standard/49467)
 - GitHub: [rclone issue #4760](https://github.com/rclone/rclone/issues/4760), multi-threaded downloads into the VFS cache
+
+---
+
+## 13. Incident: folder renames deleted files (2026-11-07)
+
+### 13.1 What happened
+Two days after the tuned settings went live, the owner renamed a top-level folder holding **11,114 files** in Explorer, then renamed it back. Each time, Explorer froze straight away. On the second rename, Windows logged `explorer.exe ... stopped interacting with Windows and was closed` (Application event 1002, 45 s in), which also took the taskbar down. The PC itself didn't reboot. Afterwards, **16 files were missing**: 8 from each rename. All 16 were found in Koofr's web Trash and restored.
+
+The rclone log for each rename:
+```
+INFO  : koofr:<koofr-mount-id>:: Can't DirMove - falling back to file moves: can't move directory - incompatible remotes
+INFO  : <new name>/<sub>/<file>: Deleted              (x8)
+ERROR : <old name>/<sub>/<file>: Failed to copy: failed to open source object: ... Got 404   (x8)
+ERROR : <old name>: Dir.Rename error: RenameDir renames: failed to open source object: ... 404
+```
+
+### 13.2 Cause
+1. A folder rename on the mount is **one** Koofr API call (`FilesMove`). Koofr answers only when it has moved **every file inside**, at about **11 ms per file**. That makes it O(files), not a quick metadata change like on a local disk.
+2. `--timeout` is rclone's IO idle timeout. Waiting for that answer counts as idle, so with `--timeout 1m` rclone abandoned any rename that took longer than about 60 s (≈ 5,500 files).
+3. rclone's Koofr backend turns **any** error from that call into a generic `ErrorCantDirMove` ([koofr.go `DirMove`](https://github.com/rclone/rclone/blob/v1.75.2/backend/koofr/koofr.go)). That's where the misleading "incompatible remotes" text comes from.
+4. The VFS then falls back to moving the files one by one, 8 at a time. **Meanwhile Koofr is still running the original move.** When rclone finds a file already present at the destination, it deletes it as a stale copy, then tries to copy the source, which Koofr has already moved, and gets a 404. The file is now gone from both places (it went to Koofr's Trash).
+5. Explorer freezes for the whole time because it waits for the rename call to return, first the abandoned move and then the slow fallback.
+
+### 13.3 Tests (throwaway `koofr:_rclone-lab`, rclone 1.75.2)
+| ID | What | Result |
+|---|---|---|
+| R1 / R2 | Rename a 6-file folder on a W: mount, with and without `--links` | 0.4 s / 0.3 s, no fallback. `--links` is **not** involved |
+| DM | `rclone moveto` of a 2,000-file folder, `--timeout 15m`, run twice | **28.5 s and 20.5 s**. Server time grows with file count |
+| X1 | `rclone moveto` of 2,000 files with `--timeout 10s` | rclone gave up and fell back while Koofr kept moving: **3,994 × 404**, 295 s. 0 lost, because the `move` command's fallback doesn't delete at the destination |
+| X2 | Same with `--timeout 10m` | 34.8 s, one clean move, 0 errors |
+| **Y1** | **Rename 8,000 files through a W: mount, `--timeout 30m`** | **86.5 s, no fallback, 0 lost.** Koofr didn't cut off the long request by itself |
+| **Y2** | **Rename 2,000 files through a W: mount, `--timeout 10s`** | Fallback at +11 s, then **8 `Deleted` + 404s, 8 files lost** (1,992 of 2,000 left). **Reproduces the incident exactly** |
+
+Scripts: `bench/95-rename-test.ps1` (R), `96-dirmove-timing.ps1` (DM), `97-dirmove-repro.ps1` (X), `98-mount-rename-repro.ps1` (Y). Results: `bench/results/rename-tests.csv`.
+
+### 13.4 Fix
+- **`--timeout 30m`.** At ~11 ms per file, that covers renames of about 160,000 files. The trade-off is that a silently dead connection (U02, once in 70 runs) now takes up to 30 min to drop instead of 1. That's acceptable, because it only happened on a background upload, and losing files isn't.
+- **Big renames are still slow.** Explorer freezes for about *files* × 11 ms whatever the timeout is, because the rename is Koofr's work. Renaming in the Koofr web app avoids the frozen Explorer. Then use the refresh shortcut.
+- **Upstream:** two rclone behaviours made this destructive: the Koofr backend hiding the real error, and the VFS fallback deleting a destination file whose source it can't read. Both are worth reporting to rclone. Neither is fixed in 1.75.2.
+
+### 13.5 One open question
+The owner reported that Explorer froze *immediately*. That's expected, since Explorer blocks on the rename at once. The INFO-level log doesn't record when each rename started, though. One log line (a refresh 44 s before the first fallback) doesn't fit perfectly with a 60 s timeout, unless the refresh ran while the rename was already pending. The lab reproduction (Y2) matches the incident in every other detail: fallback, then `Deleted`, then 404, exactly 8 files per rename.

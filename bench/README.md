@@ -30,6 +30,10 @@ New-Item -ItemType Directory -Force "$env:KOOFR_LAB\results","$env:KOOFR_LAB\log
 | `70-smoke-test.ps1` | The final flag set on W: | §6.8 |
 | `80-watchdog-tests.ps1` | T1–T9: watchdog, internet check, refresh, health check (uses `../scripts`) | §8.2 |
 | `85-installer-test.ps1` | I1–I8: install / uninstall end to end on W: (paths are from the original lab; adjust before re-running) | §8.3 |
+| `95-rename-test.ps1` | R1–R2: rename a small folder on W:, with and without `--links` | §13 |
+| `96-dirmove-timing.ps1` | DM: how long Koofr takes to move a folder of N files (`-N 2000`) | §13 |
+| `97-dirmove-repro.ps1` | X1–X2: `rclone moveto` of a folder with a too-short vs a long `--timeout` | §13 |
+| `98-mount-rename-repro.ps1` | Y1–Y2: rename through a W: mount, 8,000 files at `30m`, and 2,000 files at `10s`. **Y2 deliberately loses files** (test data only) | §13 |
 | `90-cleanup.ps1` | Purges `koofr:_rclone-lab` and deletes local test data | – |
 
 ## Tips from running them

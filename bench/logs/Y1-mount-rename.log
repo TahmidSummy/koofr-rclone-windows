@@ -1,0 +1,829 @@
+2026/11/07 02:09:09 INFO  : Starting transaction limiter: max 40 transactions/s with burst 40
+2026/11/07 02:09:09 DEBUG : rclone: Version "v1.75.2" starting with parameters ["%USERPROFILE%\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Rclone.Rclone_Microsoft.Winget.Source_8wekyb3d8bbwe\\rclone-v1.75.2-windows-amd64\\rclone.exe" "mount" "koofr:_rclone-lab" "W:" "--timeout" "30m" "--vfs-cache-mode" "full" "--network-mode" "--links" "--no-console" "--disable-http2" "--transfers" "16" "--tpslimit" "40" "--tpslimit-burst" "40" "--dir-cache-time" "1h" "--vfs-write-back" "10s" "-vv" "--dump" "headers" "--cache-dir" "E:\\rclone-lab\\cache-Y1" "--log-file" "E:\\rclone-lab\\logs\\Y1-mount-rename.log"]
+2026/11/07 02:09:09 DEBUG : Creating backend with remote "koofr:_rclone-lab"
+2026/11/07 02:09:09 DEBUG : Using config file from "%USERPROFILE%\\AppData\\Roaming\\rclone\\rclone.conf"
+2026/11/07 02:09:09 DEBUG : You have specified to dump information. Please be noted that the Accept-Encoding as shown may not be correct in the request and the response may not show Content-Encoding if the go standard libraries auto gzip encoding was in effect. In this case the body of the request will be gunzipped before showing it.
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : HTTP REQUEST (req 0x22d5affbef00)
+2026/11/07 02:09:09 DEBUG : GET /api/v2/mounts HTTP/1.1
+Host: app.koofr.net
+User-Agent: rclone/v1.75.2
+Accept: application/json
+Authorization: XXXX
+Accept-Encoding: gzip
+
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 DEBUG : HTTP RESPONSE (req 0x22d5affbef00)
+2026/11/07 02:09:09 DEBUG : HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Sat, 07 Nov 2026 02:09:09 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+X-Request-Id: <uuid>
+X-User-Id: <koofr-user-id>
+
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : HTTP REQUEST (req 0x22d5affbfb80)
+2026/11/07 02:09:09 DEBUG : GET /api/v2/mounts/<koofr-mount-id>/files/info?path=%2F_rclone-lab HTTP/1.1
+Host: app.koofr.net
+User-Agent: rclone/v1.75.2
+Accept: application/json
+Authorization: XXXX
+Accept-Encoding: gzip
+
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 DEBUG : HTTP RESPONSE (req 0x22d5affbfb80)
+2026/11/07 02:09:09 DEBUG : HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Sat, 07 Nov 2026 02:09:09 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+X-Request-Id: <uuid>
+X-User-Id: <koofr-user-id>
+
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 INFO  : koofr:<koofr-mount-id>:_rclone-lab: poll-interval is not supported by this remote
+2026/11/07 02:09:09 NOTICE: koofr:<koofr-mount-id>:_rclone-lab: Symlinks support enabled
+2026/11/07 02:09:09 DEBUG : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: root is "E:\\rclone-lab\\cache-Y1"
+2026/11/07 02:09:09 DEBUG : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: data root is "\\\\?\\E:\\rclone-lab\\cache-Y1\\vfs\\koofr\\_rclone-lab"
+2026/11/07 02:09:09 DEBUG : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: metadata root is "\\\\?\\E:\\rclone-lab\\cache-Y1\\vfsMeta\\koofr\\_rclone-lab"
+2026/11/07 02:09:09 DEBUG : Creating backend with remote ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-Y1/vfs/koofr/_rclone-lab"
+2026/11/07 02:09:09 DEBUG : :local: detected overridden config - adding "{R5KD5}" suffix to name
+2026/11/07 02:09:09 DEBUG : fs cache: renaming cache item ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-Y1/vfs/koofr/_rclone-lab" to be canonical ":local{R5KD5}://?/E:/rclone-lab/cache-Y1/vfs/koofr/_rclone-lab"
+2026/11/07 02:09:09 DEBUG : Creating backend with remote ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-Y1/vfsMeta/koofr/_rclone-lab"
+2026/11/07 02:09:09 DEBUG : :local: detected overridden config - adding "{R5KD5}" suffix to name
+2026/11/07 02:09:09 DEBUG : fs cache: renaming cache item ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-Y1/vfsMeta/koofr/_rclone-lab" to be canonical ":local{R5KD5}://?/E:/rclone-lab/cache-Y1/vfsMeta/koofr/_rclone-lab"
+2026/11/07 02:09:09 DEBUG : Network mode mounting is enabled
+2026/11/07 02:09:09 DEBUG : Mounting on "W:" ("\\server\\koofr _rclone-lab")
+2026/11/07 02:09:09 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+2026/11/07 02:09:09 DEBUG : koofr:<koofr-mount-id>:_rclone-lab: Mounting with options: ["-o" "attr_timeout=1" "-o" "uid=-1" "-o" "gid=-1" "--FileSystemName=rclone" "--VolumePrefix=\\server\\koofr _rclone-lab"]
+2026/11/07 02:09:09 DEBUG : koofr:<koofr-mount-id>:_rclone-lab: Init: 
+2026/11/07 02:09:09 DEBUG : koofr:<koofr-mount-id>:_rclone-lab: >Init: 
+2026/11/07 02:09:09 DEBUG : /: Statfs: 
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : HTTP REQUEST (req 0x22d5b012c000)
+2026/11/07 02:09:09 DEBUG : GET /api/v2/mounts/<koofr-mount-id> HTTP/1.1
+Host: app.koofr.net
+User-Agent: rclone/v1.75.2
+Accept: application/json
+Authorization: XXXX
+Accept-Encoding: gzip
+
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 DEBUG : HTTP RESPONSE (req 0x22d5b012c000)
+2026/11/07 02:09:09 DEBUG : HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Sat, 07 Nov 2026 02:09:09 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+X-Request-Id: <uuid>
+X-User-Id: <koofr-user-id>
+
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 DEBUG : /: >Statfs: stat={Bsize:4096 Frsize:4096 Blocks:271056896 Bfree:72890880 Bavail:72890880 Files:1000000000 Ffree:1000000000 Favail:0 Fsid:0 Flag:0 Namemax:255}, errc=0
+2026/11/07 02:09:09 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:09 DEBUG : /: Readlink: 
+2026/11/07 02:09:09 DEBUG : /: >Readlink: errc=-22, linkPath=""
+2026/11/07 02:09:09 DEBUG : /.: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : HTTP REQUEST (req 0x22d5b012c280)
+2026/11/07 02:09:09 DEBUG : GET /api/v2/mounts/<koofr-mount-id>/files/list?path=%2F_rclone-lab HTTP/1.1
+Host: app.koofr.net
+User-Agent: rclone/v1.75.2
+Accept: application/json
+Authorization: XXXX
+Accept-Encoding: gzip
+
+2026/11/07 02:09:09 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 DEBUG : HTTP RESPONSE (req 0x22d5b012c280)
+2026/11/07 02:09:09 DEBUG : HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Sat, 07 Nov 2026 02:09:09 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+X-Request-Id: <uuid>
+X-User-Id: <koofr-user-id>
+
+2026/11/07 02:09:09 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:09 DEBUG : /.: >Getattr: errc=-2
+2026/11/07 02:09:09 DEBUG : /: Getxattr: name="non-existant-a11ec902d22f4ec49003af15282d3b00"
+2026/11/07 02:09:09 DEBUG : /: >Getxattr: errc=-40, value=""
+The service rclone has been started.
+2026/11/07 02:09:09 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:09 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:09 DEBUG : /: Opendir: 
+2026/11/07 02:09:09 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:09 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:09 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:09 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:09 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:09 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:09 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:09 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:09 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:09 DEBUG : /: Opendir: 
+2026/11/07 02:09:09 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:09 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:09 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:09 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:09 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:09 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:09 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:09 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:09 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:09 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:09 DEBUG : /: Opendir: 
+2026/11/07 02:09:09 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:09 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:09 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:09 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:09 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:09 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:09 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /: Statfs: 
+2026/11/07 02:09:10 DEBUG : /: >Statfs: stat={Bsize:4096 Frsize:4096 Blocks:271056896 Bfree:72890880 Bavail:72890880 Files:1000000000 Ffree:1000000000 Favail:0 Fsid:0 Flag:0 Namemax:255}, errc=0
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x1
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=1
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Readdir: ofst=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:10 DEBUG : HTTP REQUEST (req 0x22d5b04eac80)
+2026/11/07 02:09:10 DEBUG : GET /api/v2/mounts/<koofr-mount-id>/files/list?path=%2F_rclone-lab%2FbigA HTTP/1.1
+Host: app.koofr.net
+User-Agent: rclone/v1.75.2
+Accept: application/json
+Authorization: XXXX
+Accept-Encoding: gzip
+
+2026/11/07 02:09:10 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:10 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:10 DEBUG : HTTP RESPONSE (req 0x22d5b04eac80)
+2026/11/07 02:09:10 DEBUG : HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Sat, 07 Nov 2026 02:09:10 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+X-Request-Id: <uuid>
+X-User-Id: <koofr-user-id>
+
+2026/11/07 02:09:10 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:10 DEBUG : /bigA: >Readdir: items=40, errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x1
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /BIGA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /BIGA: Getpath: Getpath fh=18446744073709551615
+2026/11/07 02:09:10 DEBUG : /BIGA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA: Opendir: 
+2026/11/07 02:09:10 DEBUG : /bigA: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /bigA: >OpenFile: fd=bigA/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /bigA: >Opendir: errc=0, fh=0x0
+2026/11/07 02:09:10 DEBUG : /bigA: Getpath: Getpath fh=0
+2026/11/07 02:09:10 DEBUG : /bigA: >Getpath: errc=0, normalisedPath="/bigA"
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x1
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=1
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /bigA-renamed: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA-renamed: >Getattr: errc=-2
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x2
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=2
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x2
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x2
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=2
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x2
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:09:10 DEBUG : /: Opendir: 
+2026/11/07 02:09:10 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:09:10 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:09:10 DEBUG : /: >Opendir: errc=0, fh=0x2
+2026/11/07 02:09:10 DEBUG : /: Getpath: Getpath fh=2
+2026/11/07 02:09:10 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:09:10 DEBUG : /: Releasedir: fh=0x2
+2026/11/07 02:09:10 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:09:10 DEBUG : /bigA-renamed: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:09:10 DEBUG : /bigA-renamed: >Getattr: errc=-2
+2026/11/07 02:09:10 DEBUG : /bigA: Rename: newPath="/bigA-renamed"
+2026/11/07 02:09:10 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:10 DEBUG : HTTP REQUEST (req 0x22d5b005c000)
+2026/11/07 02:09:10 DEBUG : GET /api/v2/mounts/<koofr-mount-id>/files/info?path=%2F_rclone-lab HTTP/1.1
+Host: app.koofr.net
+User-Agent: rclone/v1.75.2
+Accept: application/json
+Authorization: XXXX
+Accept-Encoding: gzip
+
+2026/11/07 02:09:10 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:10 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:10 DEBUG : HTTP RESPONSE (req 0x22d5b005c000)
+2026/11/07 02:09:10 DEBUG : HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Sat, 07 Nov 2026 02:09:10 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+X-Request-Id: <uuid>
+X-User-Id: <koofr-user-id>
+
+2026/11/07 02:09:10 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:09:10 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:09:10 DEBUG : HTTP REQUEST (req 0x22d5b029a500)
+2026/11/07 02:09:10 DEBUG : PUT /api/v2/mounts/<koofr-mount-id>/files/move?path=%2F_rclone-lab%2FbigA HTTP/1.1
+Host: app.koofr.net
+User-Agent: rclone/v1.75.2
+Content-Length: 89
+Authorization: XXXX
+Content-Type: application/json
+Accept-Encoding: gzip
+
+2026/11/07 02:09:10 DEBUG : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+2026/11/07 02:10:09 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+2026/11/07 02:10:37 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:10:37 DEBUG : HTTP RESPONSE (req 0x22d5b029a500)
+2026/11/07 02:10:37 DEBUG : HTTP/1.1 200 OK
+Transfer-Encoding: chunked
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: application/json; charset=utf-8
+Date: Sat, 07 Nov 2026 02:10:37 GMT
+Expires: 0
+Pragma: no-cache
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Vary: Accept-Encoding
+X-Request-Id: <uuid>
+X-User-Id: <koofr-user-id>
+
+2026/11/07 02:10:37 DEBUG : <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2026/11/07 02:10:37 DEBUG : bigA: Updating dir with bigA-renamed 0x22d5b07420c0
+2026/11/07 02:10:37 DEBUG : bigA: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d11: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d22: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d40: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d17: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d19: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d23: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d25: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d27: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d29: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d7: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d18: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d21: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d24: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d26: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d34: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d16: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d20: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d39: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d6: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d1: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d10: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d2: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d33: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d36: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d5: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d8: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d12: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d13: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d14: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d15: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d28: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d30: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d31: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d9: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d3: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d32: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d37: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d38: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d35: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : bigA/d4: forgetting directory cache
+2026/11/07 02:10:37 DEBUG : Added virtual directory entry vDel: "bigA"
+2026/11/07 02:10:37 DEBUG : Added virtual directory entry vAddDir: "bigA-renamed"
+2026/11/07 02:10:37 DEBUG : /bigA: >Rename: errc=0
+2026/11/07 02:10:37 DEBUG : /bigA-renamed: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /bigA-renamed: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /Desktop.ini: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /Desktop.ini: >Getattr: errc=-2
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Opendir: 
+2026/11/07 02:10:37 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:10:37 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:10:37 DEBUG : /: >Opendir: errc=0, fh=0x2
+2026/11/07 02:10:37 DEBUG : /: Getpath: Getpath fh=2
+2026/11/07 02:10:37 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:10:37 DEBUG : /: Releasedir: fh=0x1
+2026/11/07 02:10:37 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:10:37 DEBUG : /bigA: Releasedir: fh=0x0
+2026/11/07 02:10:37 DEBUG : /bigA: >Releasedir: errc=0
+2026/11/07 02:10:37 DEBUG : /Desktop.ini: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /Desktop.ini: >Getattr: errc=-2
+2026/11/07 02:10:37 DEBUG : /: Releasedir: fh=0x2
+2026/11/07 02:10:37 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Opendir: 
+2026/11/07 02:10:37 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:10:37 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:10:37 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:10:37 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:10:37 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /AutoRun.inf: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /AutoRun.inf: >Getattr: errc=-2
+2026/11/07 02:10:37 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:10:37 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /AutoRun.inf: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /AutoRun.inf: >Getattr: errc=-2
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Opendir: 
+2026/11/07 02:10:37 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:10:37 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:10:37 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:10:37 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:10:37 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:10:37 DEBUG : /: Statfs: 
+2026/11/07 02:10:37 DEBUG : /: >Statfs: stat={Bsize:4096 Frsize:4096 Blocks:271056896 Bfree:72890880 Bavail:72890880 Files:1000000000 Ffree:1000000000 Favail:0 Fsid:0 Flag:0 Namemax:255}, errc=0
+2026/11/07 02:10:37 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:10:37 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Opendir: 
+2026/11/07 02:10:37 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:10:37 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:10:37 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:10:37 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:10:37 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:10:37 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:10:37 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 02:10:37 DEBUG : /: >Getattr: errc=0
+2026/11/07 02:10:37 DEBUG : /: Opendir: 
+2026/11/07 02:10:37 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 02:10:37 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 02:10:37 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 02:10:37 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 02:10:37 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 02:10:37 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 02:10:37 DEBUG : /: >Releasedir: errc=0
+2026/11/07 02:11:09 INFO  : koofr:<koofr-mount-id>:_rclone-lab: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)

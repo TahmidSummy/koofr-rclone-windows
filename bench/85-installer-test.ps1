@@ -1,4 +1,4 @@
-﻿# End-to-end test of the repo's Install-KoofrMount.ps1 / Uninstall-KoofrMount.ps1 on a throwaway W: drive.
+# End-to-end test of the repo's Install-KoofrMount.ps1 / Uninstall-KoofrMount.ps1 on a throwaway W: drive.
 # Uses its own task prefix, port, log, cache and install folder, so the live Z: setup is untouched.
 param([string]$Repo)
 $ErrorActionPreference = 'Continue'
@@ -27,7 +27,7 @@ Pass 'I2 tasks run hidden (conhost --headless)' ($t.Actions[0].Execute -match 'c
 
 # I3 rclone flags
 $cl = (Get-CimInstance Win32_Process -Filter "Name='rclone.exe'" | Where-Object CommandLine -match '\smount\s+\S+\s+W:(\s|$)').CommandLine
-$missing = @('--disable-http2','--transfers 16','--tpslimit 40','--timeout 1m','--vfs-read-chunk-streams 16','--vfs-cache-min-free-space 10G','--rc-addr 127.0.0.1:5579','--log-file-max-size 5M','rclone-insttest.log','cache-inst') | Where-Object { $cl -notlike "*$_*" }
+$missing = @('--disable-http2','--transfers 16','--tpslimit 40','--timeout 30m','--vfs-read-chunk-streams 16','--vfs-cache-min-free-space 10G','--rc-addr 127.0.0.1:5579','--log-file-max-size 5M','rclone-insttest.log','cache-inst') | Where-Object { $cl -notlike "*$_*" }
 Pass 'I3 rclone running with the tuned flags' (-not $missing) $(if ($missing) { 'missing: ' + ($missing -join ', ') } else { 'all present' })
 Pass 'I3 rc password not on command line' ($cl -notmatch 'rc-pass') ''
 

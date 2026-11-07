@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -40,6 +40,7 @@ td.b{width:30%}
 <body>
 <main>
 <h1>rclone + Koofr: tuning results</h1>
+<p style="border:2px solid #c0392b;padding:10px;border-radius:6px"><b>Correction (7 Nov 2026):</b> this report recommends <code>--timeout 1m</code>. That was wrong. Renaming a big folder takes Koofr about 11 ms per file, and when rclone timed out first, its fallback deleted files. Use <b><code>--timeout 30m</code></b>. Details are in RESEARCH.md §13.</p>
 <p class="sub">Tests run 5 Nov 2026 on your PC, using E: as the test area and a throwaway <code>_rclone-lab</code> folder on Koofr. Your live Z: mount was never touched. 70 timed runs in total.</p>
 
 <div class="grid">
@@ -60,7 +61,7 @@ td.b{width:30%}
 <tr><td><code>--tpslimit</code><br><code>--tpslimit-burst</code></td><td>none</td><td><b>40</b><br><b>40</b></td><td>Caps requests to Koofr at 40/s. Without it, Koofr returned <code>429 Too Many Requests</code>, rclone didn't retry, and files failed. At 40/s, 600 requests in 14 s got through with 0 errors. Big files barely notice (3â€“4 requests/s).</td></tr>
 <tr><td><code>--vfs-cache-min-free-space</code></td><td>none</td><td><b>10G</b></td><td>Your cache limit is 100G but E: only has 93 GB free. This stops the cache from ever filling E: completely.</td></tr>
 <tr><td><code>--vfs-cache-poll-interval</code></td><td>15s</td><td><b>1m</b> (default)</td><td>This only controls how often rclone tidies the cache. At 15s it writes 5,760 useless log lines a day: 99.9% of your 27.6 MB log is this one message.</td></tr>
-<tr><td><code>--timeout</code></td><td>5m (default)</td><td><b>1m</b></td><td>One upload froze for exactly 5 minutes (U02) before rclone gave up on a dead connection and retried. With 1m, a stall like that costs 1 minute. <span class="tag">reasoned, not reproduced</span></td></tr>
+<tr><td><code>--timeout</code></td><td>5m (default)</td><td><b>30m</b> <i>(was 1m, see correction)</i></td><td>One upload froze for exactly 5 minutes (U02) before rclone gave up on a dead connection and retried. With 1m, a stall like that costs 1 minute. <span class="tag">reasoned, not reproduced</span></td></tr>
 <tr><td><code>--log-file-max-size</code><br><code>--log-file-max-backups</code></td><td>none</td><td><b>5M</b><br><b>3</b></td><td>Log rotation, so the log can't grow forever. Keeps at most about 20 MB.</td></tr>
 <tr><td><code>--disable-http2</code></td><td>on</td><td><b>keep</b></td><td>Confirmed. With HTTP/2 left on, one big upload was 3.2Ã— slower (U11 vs U12), 4-stream downloads were 2â€“6Ã— slower, and mount reads were 1.4Ã— slower.</td></tr>
 <tr><td><code>--vfs-cache-mode full</code></td><td>full</td><td><b>keep</b></td><td>Re-reads come from E: at about 2.5 GB/s (M01w). Mode <code>writes</code> was slower on cold reads too (16 vs 24 MiB/s).</td></tr>
@@ -71,7 +72,7 @@ td.b{width:30%}
 <h3>The full command</h3>
 <pre>rclone mount koofr: Z: ^
   --vfs-cache-mode full --network-mode --links --no-console ^
-  --disable-http2 --transfers 16 --tpslimit 40 --tpslimit-burst 40 --timeout 1m ^
+  --disable-http2 --transfers 16 --tpslimit 40 --tpslimit-burst 40 --timeout 30m ^
   --vfs-read-chunk-streams 16 --vfs-read-chunk-size 8M --vfs-read-ahead 256M ^
   --dir-cache-time 1h --vfs-fast-fingerprint --vfs-write-back 10s ^
   --vfs-cache-max-age 999h --vfs-cache-max-size 100G --vfs-cache-min-free-space 10G ^
@@ -81,7 +82,7 @@ td.b{width:30%}
 <p class="note">A ready-made version of your script with these flags is in <code>E:\rclone-lab\Mount-Koofr.recommended.ps1</code>. Your real <code>C:\Scripts\Mount-Koofr.ps1</code> hasn't been changed.</p>
 
 <h3>For <code>rclone copy</code> / <code>sync</code> (outside the mount)</h3>
-<pre>--disable-http2 --transfers 16 --multi-thread-streams 16 --tpslimit 40 --tpslimit-burst 40 --timeout 1m</pre>
+<pre>--disable-http2 --transfers 16 --multi-thread-streams 16 --tpslimit 40 --tpslimit-burst 40 --timeout 30m</pre>
 <p class="note">16 streams downloaded one 1 GiB file at 26â€“36 MiB/s, against 16â€“30 MiB/s with the default 4.</p>
 
 <h2>2. Your setup</h2>
@@ -209,7 +210,7 @@ td.b{width:30%}
 <ul>
 <li><code>--buffer-size</code>, <code>--vfs-read-ahead</code> sizes, <code>--attr-timeout</code>, and <code>--use-mmap</code> were left at your current values.</li>
 <li>Explorer thumbnails, video seeking, and apps with lots of random reads. The tests used straight sequential reads.</li>
-<li>Whether <code>--timeout 1m</code> cuts off a legitimately slow transfer. It shouldn't, because the timeout only counts time with no data moving at all.</li>
+<li>Whether <code>--timeout 1m</code> cuts off a legitimately slow transfer. It shouldn't, because the timeout only counts time with no data moving at all. <b>Update:</b> it did. A folder rename is a request with no data moving until Koofr finishes, so <code>1m</code> cut it off (RESEARCH.md §13).</li>
 <li>Multi-hour stability with the new flags. Watch the log for a few days after switching.</li>
 </ul>
 

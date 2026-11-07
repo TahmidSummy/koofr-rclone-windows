@@ -1,0 +1,643 @@
+2026/11/07 01:43:25 INFO  : Starting transaction limiter: max 40 transactions/s with burst 40
+2026/11/07 01:43:25 DEBUG : rclone: Version "v1.75.2" starting with parameters ["%USERPROFILE%\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Rclone.Rclone_Microsoft.Winget.Source_8wekyb3d8bbwe\\rclone-v1.75.2-windows-amd64\\rclone.exe" "mount" "koofr:_rclone-lab/R2" "W:" "--vfs-cache-mode" "full" "--network-mode" "--no-console" "--disable-http2" "--transfers" "16" "--tpslimit" "40" "--tpslimit-burst" "40" "--timeout" "1m" "--dir-cache-time" "1h" "--vfs-write-back" "10s" "-vv" "--cache-dir" "E:\\rclone-lab\\cache-rename-R2" "--log-file" "E:\\rclone-lab\\logs\\R2-rename.log"]
+2026/11/07 01:43:25 DEBUG : Creating backend with remote "koofr:_rclone-lab/R2"
+2026/11/07 01:43:25 DEBUG : Using config file from "%USERPROFILE%\\AppData\\Roaming\\rclone\\rclone.conf"
+2026/11/07 01:43:26 INFO  : koofr:<koofr-mount-id>:_rclone-lab/R2: poll-interval is not supported by this remote
+2026/11/07 01:43:26 DEBUG : koofr:<koofr-mount-id>:_rclone-lab/R2: vfs cache: root is "E:\\rclone-lab\\cache-rename-R2"
+2026/11/07 01:43:26 DEBUG : koofr:<koofr-mount-id>:_rclone-lab/R2: vfs cache: data root is "\\\\?\\E:\\rclone-lab\\cache-rename-R2\\vfs\\koofr\\_rclone-lab\\R2"
+2026/11/07 01:43:26 DEBUG : koofr:<koofr-mount-id>:_rclone-lab/R2: vfs cache: metadata root is "\\\\?\\E:\\rclone-lab\\cache-rename-R2\\vfsMeta\\koofr\\_rclone-lab\\R2"
+2026/11/07 01:43:26 DEBUG : Creating backend with remote ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-rename-R2/vfs/koofr/_rclone-lab/R2"
+2026/11/07 01:43:26 DEBUG : :local: detected overridden config - adding "{R5KD5}" suffix to name
+2026/11/07 01:43:26 DEBUG : fs cache: renaming cache item ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-rename-R2/vfs/koofr/_rclone-lab/R2" to be canonical ":local{R5KD5}://?/E:/rclone-lab/cache-rename-R2/vfs/koofr/_rclone-lab/R2"
+2026/11/07 01:43:26 DEBUG : Creating backend with remote ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-rename-R2/vfsMeta/koofr/_rclone-lab/R2"
+2026/11/07 01:43:26 DEBUG : :local: detected overridden config - adding "{R5KD5}" suffix to name
+2026/11/07 01:43:26 DEBUG : fs cache: renaming cache item ":local,encoding='Slash,LtGt,DoubleQuote,Colon,Question,Asterisk,Pipe,BackSlash,Ctl,RightSpace,RightPeriod,InvalidUtf8,Dot',links=false:E:/rclone-lab/cache-rename-R2/vfsMeta/koofr/_rclone-lab/R2" to be canonical ":local{R5KD5}://?/E:/rclone-lab/cache-rename-R2/vfsMeta/koofr/_rclone-lab/R2"
+2026/11/07 01:43:26 DEBUG : Network mode mounting is enabled
+2026/11/07 01:43:26 DEBUG : Mounting on "W:" ("\\server\\koofr _rclone-lab R2")
+2026/11/07 01:43:26 INFO  : koofr:<koofr-mount-id>:_rclone-lab/R2: vfs cache: cleaned: objects 0 (was 0) in use 0, to upload 0, uploading 0, total size 0 (was 0)
+2026/11/07 01:43:26 DEBUG : koofr:<koofr-mount-id>:_rclone-lab/R2: Mounting with options: ["-o" "attr_timeout=1" "-o" "uid=-1" "-o" "gid=-1" "--FileSystemName=rclone" "--VolumePrefix=\\server\\koofr _rclone-lab R2"]
+2026/11/07 01:43:26 DEBUG : koofr:<koofr-mount-id>:_rclone-lab/R2: Init: 
+2026/11/07 01:43:26 DEBUG : koofr:<koofr-mount-id>:_rclone-lab/R2: >Init: 
+2026/11/07 01:43:26 DEBUG : /: Statfs: 
+2026/11/07 01:43:26 DEBUG : /: >Statfs: stat={Bsize:4096 Frsize:4096 Blocks:271056896 Bfree:75621888 Bavail:75621888 Files:1000000000 Ffree:1000000000 Favail:0 Fsid:0 Flag:0 Namemax:255}, errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Readlink: 
+2026/11/07 01:43:26 ERROR : symlinks not supported without the --links flag: /
+2026/11/07 01:43:26 DEBUG : /: >Readlink: errc=-40, linkPath=""
+2026/11/07 01:43:26 DEBUG : /: Getxattr: name="non-existant-a11ec902d22f4ec49003af15282d3b00"
+2026/11/07 01:43:26 DEBUG : /: >Getxattr: errc=-40, value=""
+The service rclone has been started.
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /: Statfs: 
+2026/11/07 01:43:26 DEBUG : /: >Statfs: stat={Bsize:4096 Frsize:4096 Blocks:271056896 Bfree:75621888 Bavail:75621888 Files:1000000000 Ffree:1000000000 Favail:0 Fsid:0 Flag:0 Namemax:255}, errc=0
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x1
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=1
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Readdir: ofst=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Readdir: items=1, errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x1
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Readdir: ofst=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Readdir: items=1, errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before/sub: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before/sub: >OpenFile: fd=before/sub/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before/sub: >Opendir: errc=0, fh=0x1
+2026/11/07 01:43:26 DEBUG : /before/sub: Getpath: Getpath fh=1
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getpath: errc=0, normalisedPath="/before/sub"
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before/sub: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before/sub: >OpenFile: fd=before/sub/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before/sub: >Opendir: errc=0, fh=0x2
+2026/11/07 01:43:26 DEBUG : /before/sub: Getpath: Getpath fh=2
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getpath: errc=0, normalisedPath="/before/sub"
+2026/11/07 01:43:26 DEBUG : /before/sub: Readdir: ofst=0, fh=0x1
+2026/11/07 01:43:26 DEBUG : /before/sub: >Readdir: items=6, errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Releasedir: fh=0x1
+2026/11/07 01:43:26 DEBUG : /before/sub: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Releasedir: fh=0x2
+2026/11/07 01:43:26 DEBUG : /before/sub: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before/sub: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before/sub: >OpenFile: fd=before/sub/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before/sub: >Opendir: errc=0, fh=0x1
+2026/11/07 01:43:26 DEBUG : /before/sub: Getpath: Getpath fh=1
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getpath: errc=0, normalisedPath="/before/sub"
+2026/11/07 01:43:26 DEBUG : /before/sub: Readdir: ofst=0, fh=0x1
+2026/11/07 01:43:26 DEBUG : /before/sub: >Readdir: items=6, errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before/sub: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before/sub: Releasedir: fh=0x1
+2026/11/07 01:43:26 DEBUG : /before/sub: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /BEFORE: Getpath: Getpath fh=18446744073709551615
+2026/11/07 01:43:26 DEBUG : /BEFORE: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /before: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /before: Opendir: 
+2026/11/07 01:43:26 DEBUG : /before: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /before: >OpenFile: fd=before/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /before: >Opendir: errc=0, fh=0x0
+2026/11/07 01:43:26 DEBUG : /before: Getpath: Getpath fh=0
+2026/11/07 01:43:26 DEBUG : /before: >Getpath: errc=0, normalisedPath="/before"
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x1
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=1
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /after: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /after: >Getattr: errc=-2
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x2
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=2
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x2
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x2
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=2
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x2
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /: >Getattr: errc=0
+2026/11/07 01:43:26 DEBUG : /: Opendir: 
+2026/11/07 01:43:26 DEBUG : /: OpenFile: flags=O_RDONLY, perm=-rwxrwxrwx
+2026/11/07 01:43:26 DEBUG : /: >OpenFile: fd=/ (r), err=<nil>
+2026/11/07 01:43:26 DEBUG : /: >Opendir: errc=0, fh=0x2
+2026/11/07 01:43:26 DEBUG : /: Getpath: Getpath fh=2
+2026/11/07 01:43:26 DEBUG : /: >Getpath: errc=0, normalisedPath="/"
+2026/11/07 01:43:26 DEBUG : /: Releasedir: fh=0x2
+2026/11/07 01:43:26 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:26 DEBUG : /after: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:26 DEBUG : /after: >Getattr: errc=-2
+2026/11/07 01:43:26 DEBUG : /before: Rename: newPath="/after"
+2026/11/07 01:43:27 DEBUG : before: Updating dir with after 0x375d0a0ee300
+2026/11/07 01:43:27 DEBUG : before: forgetting directory cache
+2026/11/07 01:43:27 DEBUG : before/sub: forgetting directory cache
+2026/11/07 01:43:27 DEBUG : Added virtual directory entry vDel: "before"
+2026/11/07 01:43:27 DEBUG : Added virtual directory entry vAddDir: "after"
+2026/11/07 01:43:27 DEBUG : /before: >Rename: errc=0
+2026/11/07 01:43:27 DEBUG : /: Releasedir: fh=0x1
+2026/11/07 01:43:27 DEBUG : /: >Releasedir: errc=0
+2026/11/07 01:43:27 DEBUG : /before: Releasedir: fh=0x0
+2026/11/07 01:43:27 DEBUG : /before: >Releasedir: errc=0
+2026/11/07 01:43:27 DEBUG : /after: Getattr: fh=0xFFFFFFFFFFFFFFFF
+2026/11/07 01:43:27 DEBUG : /after: >Getattr: errc=0

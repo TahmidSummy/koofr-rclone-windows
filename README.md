@@ -10,8 +10,6 @@ Compared with a typical rclone mount, measured on the same connection:
 | Saving files onto the drive | 11.5 MiB/s | **18.5 MiB/s** (~1.6×) |
 | Uploading many small files | 4.4 files/s | **21.8 files/s** (~5×) |
 | Koofr "429 Too Many Requests" failures | whole batches failed | **0** |
-| Stuck connection | 5-minute freeze | 1 minute at most |
-
 You also get:
 - **Self-healing.** Every 15 minutes it checks the drive. If it's frozen or gone, it fixes it and tells you.
 - **A "Refresh Koofr" desktop shortcut.** Click it to see files you just added from your phone or the website, without waiting.
@@ -99,6 +97,7 @@ When it says **All set**, open `Z:` in Explorer.
 - **Big files open slowly the first time, then instantly.** That's the cache working.
 - **Many small files open at about 0.3 s each.** That's Koofr's own per-file delay, and no setting removes it. Copying a whole folder is much faster than opening files one by one, because rclone does those in parallel.
 - **Saving a file is instant.** It lands in the cache and uploads about 10 s after you close it. Don't shut the PC down in the middle of a big upload. If you do, it resumes next time.
+- **Renaming a big folder freezes Explorer for a while.** Koofr moves every file inside it one by one, at about 11 ms per file, so 10,000 files take about 2 minutes. Explorer waits the whole time, and Windows may close it, which makes the taskbar vanish briefly. Your files are safe; just wait. For folders with thousands of files, it's smoother to rename them in the Koofr web app and then click **Refresh Koofr**. *(An earlier version of this repo used `--timeout 1m`, which made such renames delete files. See [RESEARCH.md §13](docs/RESEARCH.md#13-incident-folder-renames-deleted-files-2026-11-07). If you installed before 7 Nov 2026, update.)*
 
 ### Logs (all in `%USERPROFILE%`)
 - `koofr-mount-script.log`: what the watchdog did (mounts, restarts, notifications)
@@ -133,6 +132,7 @@ This removes the tasks, shortcut, scripts and drive. Your **files on Koofr are n
 | Very slow transfers | Make sure `--disable-http2` is in use (it is, in the script). Check your own internet speed. Koofr's speed varies by time of day. |
 | Lots of `429` in the log | Something is opening many files at once. `--tpslimit 40` should handle it. Lower it to 30 if it persists. |
 | Drive is there but empty or stuck | Wait for the next 15-minute check, or run the **Koofr Mount** task by hand in Task Scheduler. |
+| Files missing after renaming or moving a folder | Look in the Koofr web app → **Trash** and restore them. Then check that `Mount-Koofr.ps1` has `--timeout 30m`, not `1m`. In `rclone-Koofr.log`, the sign of this bug is `Can't DirMove - falling back to file moves` followed by `Deleted` and `404` lines. |
 
 ## Security notes
 - rclone stores your Koofr app password **obscured, not encrypted** in `%APPDATA%\rclone\rclone.conf`. Keep that file private. Revoke the app password in Koofr if the PC is lost.

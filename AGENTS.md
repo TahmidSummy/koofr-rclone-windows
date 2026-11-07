@@ -19,6 +19,7 @@ You are an AI agent (Claude Code or similar) helping a person mount their **Koof
 4. **Don't kill a running rclone mount while uploads are pending.** Check the last `vfs cache: cleaned:` line in `%USERPROFILE%\rclone-Koofr.log`, and only stop it if it says `to upload 0, uploading 0`. Pending uploads do resume on the next start, but don't rely on it.
 5. **Don't touch the user's real Koofr data during tests.** Use a throwaway folder such as `koofr:_rclone-lab`, and purge it afterwards. Check free quota first with `rclone about koofr:`.
 6. Ask before installing software, deleting anything, or changing settings that aren't in this file.
+7. **Never lower `--timeout` below `30m`** on a Koofr mount, and never "tune" it for faster stall recovery. A Koofr folder rename takes about 11 ms per file, and if rclone times out first, its fallback deletes files (RESEARCH.md §13). This happened for real with `1m`.
 
 ## Steps
 
@@ -87,6 +88,8 @@ The settings were tuned on a 770/110 Mbit line, 29 ms from Koofr. On a very diff
 | Cloudflare `speed.cloudflare.com/__down?bytes=200000000` | 403 for big sizes | Use ≤25 MB, or `https://proof.ovh.net/files/1Gb.dat` for download speed |
 | Short benchmark runs | Koofr speed swings up to 2× through the evening | Repeat runs and interleave A/B, and trust only gaps bigger than that |
 | Hammering many small files | 429 from Koofr, files fail, and the next test fails too | Keep `--tpslimit 40`, and pause about 90 s between heavy tests |
+| `--timeout 1m` (our first tuned value) | Renaming an 11,000-file folder in Explorer: Explorer froze and was killed by Windows, and **16 files were deleted** (recovered from Koofr's Trash) | `--timeout 30m`. If a user reports files missing after a rename, look for `Can't DirMove - falling back` followed by `Deleted` / `404` in the rclone log, and send them to Koofr web → Trash |
+| Testing renames inside a small test folder only | A rename of 6 files is instant, so it hides the problem | Test with thousands of files (`bench/98-mount-rename-repro.ps1`) |
 
 ## Repo map
 ```
